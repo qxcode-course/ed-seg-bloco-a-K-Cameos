@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-10_19-55-14",
+            "content": "package main\n\nimport (\"fmt\" \n\"math\")\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    maiorPontuacao := 101\n    indiceVencedor := -1\n\n    for i := 0; i < n; i++{\n        var a, b int\n        fmt.Scan(&a, &b)\n\n        if a < 10 || b < 10 {\n            continue\n        }\n\n        diferenca := int(math.Abs(float64(a-b)))\n\n        if diferenca < maiorPontuacao {\n            maiorPontuacao = diferenca\n            indiceVencedor = i\n        }\n    }\n    if indiceVencedor == -1 {\n        fmt.Println(\"nao ha vencedores\")\n    }else {\n        fmt.Println(indiceVencedor)\n    }\n\n\n}\n",
+            "lines": "34"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-10_18-52-11",
+            "content": "@@ -148,9 +148,8 @@\n ual \n-+\n = d%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-10_18-54-43",
+            "content": "@@ -81,17 +81,16 @@\n &p, &f, \n-&\n d)%0A%0A    \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-10_18-57-53",
+            "content": "@@ -462,16 +462,18 @@\n intln(%22S\n+IM\n %22)%0A    %7D\n@@ -501,16 +501,18 @@\n intln(%22N\n+AO\n %22)%0A    %7D\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-10_19-00-23",
+            "content": "@@ -288,17 +288,17 @@\n tual == \n-h\n+p\n  %7B%0A     \n@@ -316,11 +316,12 @@\n u = \n-tru\n+fals\n e%0A  \n@@ -354,33 +354,33 @@\n lse if atual == \n-p\n+h\n  %7B%0A            f\n@@ -378,36 +378,35 @@\n         fugiu = \n-fals\n+tru\n e%0A            br\n@@ -508,11 +508,10 @@\n )%0A    %7D%0A\n-%0A\n %7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-10_19-13-30",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var h, p, f, d int\n    fmt.Scan(&h, &p, &f, &d)\n\n    atual := f\n    fugiu := false\n\n    for {\n        atual += d\n\n        if atual > 15 {\n            atual = 0\n        }else if atual < 0 {\n            atual = 15\n        }\n        \n        if atual == h {\n            fugiu = true\n            break\n        }else if atual == p {\n            fugiu = false\n            break\n        }\n    }\n    if fugiu {\n        fmt.Println(\"S\")\n    }else {\n        fmt.Println(\"N\")\n    }\n\n}\n",
+            "lines": "33"
+        }
+    ]
+}
