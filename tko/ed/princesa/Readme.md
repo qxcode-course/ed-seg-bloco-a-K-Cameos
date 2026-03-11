@@ -55,7 +55,7 @@ pos = pos % size; //se ele era o último agora é o zero
 - Qual dos algoritmos você acha que é mais eficiente?
 - Implemente os dois e vá aumentando a instância do problema e veja o resultado.
 
-```txt
+```toml
 >>>>>>>> 01
 3 1
 ========
