@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_18-42-17",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var nome string\n    var idade int\n    fmt.Scanf(\"%s\\n %d\\n\", &nome, &idade)\n\n    if idade < 12 {\n            fmt.Printf(\"%s eh crianca\\n\", nome)\n        }else if idade < 18 {\n            fmt.Printf(\"%s eh jovem\\n\", nome)\n        }else if idade < 65 {\n            fmt.Printf(\"%s eh adulto\\n\", nome)\n        }else if idade < 1000 {\n            fmt.Printf(\"%s eh idoso\\n\", nome)\n        }else{\n            fmt.Printf(\"%s eh mumia\\n\", nome)\n        }\n}\n",
+            "lines": "19"
+        }
+    ]
+}
