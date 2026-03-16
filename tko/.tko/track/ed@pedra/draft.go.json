@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_19-18-38",
+            "content": "@@ -495,20 +495,25 @@\n ln(%22\n-sem ganha\n+nao ha vence\n dor\n+es\n %22)%0A \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-16_19-20-05",
+            "content": "package main\n\nimport (\"fmt\" \n\"math\")\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    maiorPontuacao := 101\n    indiceVencedor := -1\n\n    for i := 0; i < n; i++{\n        var a, b int\n        fmt.Scan(&a, &b)\n\n        if a < 10 || b < 10 {\n            continue\n        }\n\n        diferenca := int(math.Abs(float64(a-b)))\n\n        if diferenca < maiorPontuacao {\n            maiorPontuacao = diferenca\n            indiceVencedor = i\n        }\n    }\n    if indiceVencedor == -1 {\n        fmt.Println(\"sem ganhador\")\n    }else {\n        fmt.Println(indiceVencedor)\n    }\n\n\n}\n",
+            "lines": "33"
+        }
+    ]
+}

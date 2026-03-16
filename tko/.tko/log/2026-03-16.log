@@ -14,3 +14,33 @@
 2026-03-16 18:28:18, MOVE, v:1, k:ed@mumia, mode:PICK
 2026-03-16 18:42:17, EXEC, v:1, k:ed@mumia, mode:FULL, rate:100, size:19
 2026-03-16 18:42:21, EXEC, v:1, k:ed@mumia, mode:FULL, rate:100
+2026-03-16 18:43:56, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-16 18:45:01, SELF, v:1, k:ed@pintando, self:1, rate:100, study:30
+2026-03-16 18:47:10, SELF, v:1, k:ed@mumia, self:1, rate:100, study:30
+2026-03-16 18:47:10, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-16 18:47:15, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-16 18:49:52, MOVE, v:1, k:sandbox@user_002, mode:PICK
+2026-03-16 18:50:04, MOVE, v:1, k:sandbox@user_002, mode:BACK
+2026-03-16 18:54:15, MOVE, v:1, k:ed@fuga, mode:DOWN
+2026-03-16 18:54:19, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-16 19:04:58, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0, size:33
+2026-03-16 19:05:16, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0
+2026-03-16 19:06:33, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0, size:33
+2026-03-16 19:07:25, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0, size:34
+2026-03-16 19:07:54, EXEC, v:1, k:ed@fuga, mode:FREE
+2026-03-16 19:09:53, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-16 19:10:00, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100, size:33
+2026-03-16 19:10:14, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-16 19:10:57, SELF, v:1, k:ed@fuga, self:1, rate:100, study:35
+2026-03-16 19:11:26, MOVE, v:1, k:sandbox@user_003, mode:PICK
+2026-03-16 19:11:57, MOVE, v:1, k:sandbox@user_003, mode:BACK
+2026-03-16 19:15:28, MOVE, v:1, k:ed@pedra, mode:DOWN
+2026-03-16 19:16:15, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-16 19:17:52, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-16 19:18:38, EXEC, v:1, k:ed@pedra, mode:FULL, rate:75, size:33
+2026-03-16 19:19:08, EXEC, v:1, k:ed@pedra, mode:FULL, rate:75
+2026-03-16 19:19:32, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-16 19:19:36, EXEC, v:1, k:ed@pedra, mode:FULL, rate:75
+2026-03-16 19:20:05, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100, size:33
+2026-03-16 19:20:23, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-03-16 19:20:49, SELF, v:1, k:ed@pedra, self:1, rate:100, study:50
