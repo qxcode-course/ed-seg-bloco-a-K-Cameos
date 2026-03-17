@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_18-58-45",
+            "content": "@@ -65,16 +65,21 @@\n can(&n)%0A\n+    %0A\n     anim\n@@ -430,32 +430,8 @@\n    %7D\n-%0A%0A    fmt.Println(pares)\n %0A%7D%0A%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-17_19-05-46",
+            "content": "\npackage main\nimport \"fmt\"\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    animais := make([] int, n)\n    for i := 0; i < n; i++ {\n        fmt.Scan(&animais[i])\n    }\n    \n    ncasais := make(map[int]int)\n    pares := 0\n\n    for _, animal := range animais{\n        oposto := -animal\n\n        if ncasais[oposto] > 0{\n            ncasais[oposto]--\n            pares++\n        }else {\n            ncasais[animal]++\n        }\n    }\n\n    fmt.Println(pares)\n}\n\n\n\n",
+            "lines": "30"
+        }
+    ]
+}

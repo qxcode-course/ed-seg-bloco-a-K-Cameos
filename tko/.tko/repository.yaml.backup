@@ -10,16 +10,16 @@ sources:
   target: https://github.com/qxcodeed/arcade.git
   type: git
   writeable: false
-  cache_timestamp: '2026-03-16 19:19:24'
+  cache_timestamp: '2026-03-17 17:37:20'
   quests: null
   tasks: null
 expanded:
-- sandbox@student_sandbox_alias:00_rascunhos
-- ed@busca-em-largura
-- ed@análise
-- ed@main-quest
-- sandbox@student_sandbox_alias
 - ed@revisão
+- sandbox@student_sandbox_alias:00_rascunhos
+- sandbox@student_sandbox_alias
+- ed@análise
+- ed@busca-em-largura
+- ed@main-quest
 tasks:
   sandbox@user_003: '{rate:50}'
   ed@pintando: '{self:1, rate:100, study:30}'
@@ -34,4 +34,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@pedra
+selected: ed@casais
