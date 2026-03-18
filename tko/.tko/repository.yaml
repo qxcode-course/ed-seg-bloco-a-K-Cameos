@@ -13,12 +13,12 @@ sources:
   quests: null
   tasks: null
 expanded:
-- sandbox@student_sandbox_alias
 - ed@main-quest
-- ed@revisão
 - sandbox@student_sandbox_alias:00_rascunhos
-- ed@busca-em-largura
+- sandbox@student_sandbox_alias
 - ed@análise
+- ed@busca-em-largura
+- ed@revisão
 tasks:
   sandbox@user_003: '{rate:50}'
   ed@pintando: '{self:1, rate:100, study:30}'
@@ -34,4 +34,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@gomos
+selected: ed@baruel

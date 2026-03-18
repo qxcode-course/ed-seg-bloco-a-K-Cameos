@@ -14,32 +14,36 @@ func main() {
         freq[x]++
     }
 
-    repetida := false
+    primeira := true
+
     for i := 1; i <= n; i++ {
         if freq[i] > 1 {
-            if repetida {
-                fmt.Println(" ")
+            for j := 0; j < freq[i]-1; j++ {
+                if !primeira {
+                    fmt.Print(" ")
+                }
+                fmt.Print(i)
+                primeira = false
             }
-            fmt.Print(i)
-            repetida = true
         }
     }
-    if !repetida {
+    if primeira {
         fmt.Print("N")
     }
     fmt.Println()
 
-    falta := false
-    for i:= 1; i<=n; i++ {
+    primeira = true
+
+    for i := 1; i<= n; i++ {
         if freq[i] == 0 {
-            if falta {
+            if !primeira {
                 fmt.Print(" ")
             }
             fmt.Print(i)
-            falta = true
+            primeira = false
         }
     }
-    if !falta {
+    if primeira {
         fmt.Print("N")
     }
     fmt.Println()

@@ -27,8 +27,53 @@
         },
         {
             "label": "2026-03-17_19-49-20",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\nfunc main() {\n    var n, m int\n    fmt.Scan(&n, &m)\n\n    freq := make([] int, n+1)\n    for i := 0; i<m; i++ {\n        var x int\n        fmt.Scan(&x)\n        freq[x]++\n    }\n\n    repetida := false\n    for i := 1; i <= n; i++ {\n        if freq[i] > 1 {\n            if repetida {\n                fmt.Println(\" \")\n            }\n            fmt.Print(i)\n            repetida = true\n        }\n    }\n    if !repetida {\n        fmt.Print(\"N\")\n    }\n\n    falta := false\n    for i:= 1; i<=n; i++ {\n        if freq[i] == 0 {\n            if falta {\n                fmt.Print(\" \")\n            }\n            fmt.Print(i)\n            falta = true\n        }\n    }\n    if !falta {\n        fmt.Print(\"N\")\n    }\n    fmt.Println()\n}\n",
+            "content": "@@ -465,34 +465,16 @@\n %22)%0A    %7D\n-%0A    fmt.Println()\n %0A%0A    fa\n",
             "lines": "45"
+        },
+        {
+            "label": "2026-03-18_13-28-47",
+            "content": "@@ -319,32 +319,34 @@\n        fmt.Print\n+ln\n (%22 %22)%0A          \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-18_13-33-19",
+            "content": "@@ -202,27 +202,29 @@\n   %7D%0A\n+%0A\n     \n-primeir\n+repetid\n a := \n-tru\n+fals\n e%0A  \n@@ -240,18 +240,19 @@\n = 1; i %3C\n- m\n+= n\n ; i++ %7B%0A\n@@ -292,74 +292,22 @@\n     \n-for j := 0; j %3C freq%5Bi%5D; j++ %7B%0A                if !primeira %7B%0A    \n+if repetida %7B%0A\n     \n@@ -341,34 +341,26 @@\n             \n-    %7D%0A    \n+%7D%0A\n             \n@@ -388,42 +388,23 @@\n     \n-   \n- primeira = false%0A            %7D\n+repetida = true\n %0A   \n@@ -415,39 +415,40 @@\n  %7D%0A    %7D%0A    if \n-primeir\n+!repetid\n a %7B%0A        fmt.\n@@ -472,22 +472,40 @@\n     \n-primeir\n+fmt.Println()%0A%0A    falt\n a \n+:\n = \n-tru\n+fals\n e%0A  \n@@ -507,36 +507,33 @@\n se%0A    for i\n- \n := 1; i\n- \n %3C=\n- \n n; i++ %7B%0A   \n@@ -574,16 +574,12 @@\n  if \n-!primeir\n+falt\n a %7B%0A\n@@ -664,23 +664,19 @@\n     \n-primeira = fals\n+falta = tru\n e%0A  \n@@ -700,15 +700,13 @@\n  if \n-primeir\n+!falt\n a %7B%0A\n@@ -756,10 +756,6 @@\n n()%0A\n-    %0A\n %7D\n+%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-18_13-45-59",
+            "content": "@@ -202,29 +202,27 @@\n   %7D%0A\n-%0A\n     \n-repetid\n+primeir\n a := \n-fals\n+tru\n e%0A  \n@@ -242,11 +242,10 @@\n  i %3C\n-= n\n+ m\n ; i+\n@@ -289,22 +289,74 @@\n     \n-if repetida %7B%0A\n+for j := 0; j %3C freq%5Bi%5D; j++ %7B%0A                if !primeira %7B%0A    \n     \n@@ -376,18 +376,16 @@\n mt.Print\n-ln\n (%22 %22)%0A  \n@@ -386,34 +386,42 @@\n  %22)%0A            \n-%7D%0A\n+    %7D%0A    \n             fmt.\n@@ -445,23 +445,42 @@\n     \n-repetida = true\n+    primeira = false%0A            %7D\n %0A   \n@@ -503,16 +503,15 @@\n  if \n-!repetid\n+primeir\n a %7B%0A\n@@ -547,40 +547,22 @@\n     \n-fmt.Println()%0A%0A    falt\n+primeir\n a \n-:\n = \n-fals\n+tru\n e%0A  \n@@ -572,17 +572,20 @@\n or i\n+ \n := 1; i\n+ \n %3C=\n+ \n n; i\n@@ -630,20 +630,24 @@\n      if \n-falt\n+!primeir\n a %7B%0A    \n@@ -728,19 +728,23 @@\n     \n-falta = tru\n+primeira = fals\n e%0A  \n@@ -768,13 +768,15 @@\n  if \n-!falt\n+primeir\n a %7B%0A\n@@ -822,10 +822,14 @@\n intln()%0A\n+    %0A\n %7D\n-%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-18_13-48-21",
+            "content": "@@ -319,32 +319,34 @@\n        fmt.Print\n+ln\n (%22 %22)%0A          \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-18_13-48-33",
+            "content": "@@ -207,25 +207,25 @@\n     \n-primeira := true%0A\n+repetida := false\n %0A   \n@@ -292,76 +292,22 @@\n     \n-for j := 0; j %3C freq%5Bi%5D-1; j++ %7B%0A                if !primeira %7B%0A    \n+if repetida %7B%0A\n     \n@@ -325,36 +325,32 @@\n  fmt.Print(%22 %22)%0A\n-    \n             %7D%0A  \n@@ -351,36 +351,32 @@\n   %7D%0A            \n-    \n fmt.Print(i)%0A   \n@@ -388,42 +388,23 @@\n     \n-    primeira = false%0A            %7D\n+repetida = true\n %0A   \n@@ -415,39 +415,40 @@\n  %7D%0A    %7D%0A    if \n-primeir\n+!repetid\n a %7B%0A        fmt.\n@@ -452,18 +452,16 @@\n mt.Print\n-ln\n (%22N%22)%0A  \n@@ -491,25 +491,23 @@\n     \n-primeir\n+falt\n a \n+:\n = \n-tru\n+fals\n e%0A\n-%0A\n     \n@@ -507,25 +507,24 @@\n se%0A    for i\n- \n := 1; i%3C= n;\n@@ -520,17 +520,16 @@\n = 1; i%3C=\n- \n n; i++ %7B\n@@ -574,16 +574,12 @@\n  if \n-!primeir\n+falt\n a %7B%0A\n@@ -664,23 +664,19 @@\n     \n-primeira = fals\n+falta = tru\n e%0A  \n@@ -700,15 +700,13 @@\n  if \n-primeir\n+!falt\n a %7B%0A\n@@ -753,8 +753,9 @@\n ntln()%0A%7D\n+%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-18_14-01-55",
+            "content": "@@ -541,24 +541,42 @@\n n(%22N%22)%0A    %7D\n+%0A    fmt.Println()\n %0A%0A    primei\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-18_14-02-16",
+            "content": "@@ -545,34 +545,16 @@\n %22)%0A    %7D\n-%0A    fmt.Println()\n %0A%0A    pr\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-18_14-02-33",
+            "content": "@@ -524,32 +524,34 @@\n        fmt.Print\n+ln\n (%22N%22)%0A    %7D%0A    \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-18_14-04-34",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\nfunc main() {\n    var n, m int\n    fmt.Scan(&n, &m)\n\n    freq := make([] int, n+1)\n    for i := 0; i<m; i++ {\n        var x int\n        fmt.Scan(&x)\n        freq[x]++\n    }\n\n    primeira := true\n\n    for i := 1; i <= n; i++ {\n        if freq[i] > 1 {\n            for j := 0; j < freq[i]-1; j++ {\n                if !primeira {\n                    fmt.Print(\" \")\n                }\n                fmt.Print(i)\n                primeira = false\n            }\n        }\n    }\n    if primeira {\n        fmt.Print(\"N\")\n    }\n    fmt.Println()\n\n    primeira = true\n\n    for i := 1; i<= n; i++ {\n        if freq[i] == 0 {\n            if !primeira {\n                fmt.Print(\" \")\n            }\n            fmt.Print(i)\n            primeira = false\n        }\n    }\n    if primeira {\n        fmt.Print(\"N\")\n    }\n    fmt.Println()\n}",
+            "lines": "50"
         }
     ]
 }
