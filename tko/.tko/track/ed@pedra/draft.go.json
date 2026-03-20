@@ -7,8 +7,23 @@
         },
         {
             "label": "2026-03-16_19-20-05",
-            "content": "package main\n\nimport (\"fmt\" \n\"math\")\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    maiorPontuacao := 101\n    indiceVencedor := -1\n\n    for i := 0; i < n; i++{\n        var a, b int\n        fmt.Scan(&a, &b)\n\n        if a < 10 || b < 10 {\n            continue\n        }\n\n        diferenca := int(math.Abs(float64(a-b)))\n\n        if diferenca < maiorPontuacao {\n            maiorPontuacao = diferenca\n            indiceVencedor = i\n        }\n    }\n    if indiceVencedor == -1 {\n        fmt.Println(\"sem ganhador\")\n    }else {\n        fmt.Println(indiceVencedor)\n    }\n\n\n}\n",
+            "content": "@@ -75,17 +75,16 @@\n can(&n)%0A\n-%0A\n     maio\n@@ -153,17 +153,16 @@\n %3C n; i++\n- \n %7B%0A      \n@@ -311,11 +311,9 @@\n 64(a\n- - \n+-\n b)))\n@@ -422,17 +422,17 @@\n cedor = \n-1\n+i\n %0A       \n@@ -495,13 +495,10 @@\n ln(%22\n-nenhu\n+se\n m ga\n",
             "lines": "33"
+        },
+        {
+            "label": "2026-03-20_01-41-29",
+            "content": "@@ -495,18 +495,21 @@\n rintln(%22\n-se\n+nenhu\n m ganhad\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-20_01-42-28",
+            "content": "@@ -79,13 +79,9 @@\n &n)%0A\n-    \n %0A\n+\n     \n@@ -154,16 +154,17 @@\n %3C n; i++\n+ \n %7B%0A      \n@@ -309,17 +309,19 @@\n loat64(a\n--\n+ - \n b)))%0A%0A  \n@@ -426,17 +426,17 @@\n cedor = \n-i\n+1\n %0A       \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-20_01-43-32",
+            "content": "package main\n\nimport (\"fmt\" \n\"math\")\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    \n    maiorPontuacao := 101\n    indiceVencedor := -1\n\n    for i := 0; i < n; i++{\n        var a, b int\n        fmt.Scan(&a, &b)\n\n        if a < 10 || b < 10 {\n            continue\n        }\n\n        diferenca := int(math.Abs(float64(a-b)))\n\n        if diferenca < maiorPontuacao {\n            maiorPontuacao = diferenca\n            indiceVencedor = i\n        }\n    }\n    if indiceVencedor == -1 {\n        fmt.Println(\"sem ganhador\")\n    }else {\n        fmt.Println(indiceVencedor)\n    }\n\n\n}\n",
+            "lines": "34"
         }
     ]
 }

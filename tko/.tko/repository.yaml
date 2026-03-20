@@ -13,12 +13,12 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@main-quest
-- sandbox@student_sandbox_alias:00_rascunhos
-- sandbox@student_sandbox_alias
-- ed@análise
-- ed@busca-em-largura
 - ed@revisão
+- sandbox@student_sandbox_alias:00_rascunhos
+- ed@análise
+- ed@main-quest
+- ed@busca-em-largura
+- sandbox@student_sandbox_alias
 tasks:
   sandbox@user_003: '{rate:50}'
   ed@pintando: '{self:1, rate:100, study:30}'
@@ -26,6 +26,8 @@ tasks:
   ed@fuga: '{self:1, rate:100, study:35}'
   ed@pedra: '{self:1, rate:100, study:50}'
   ed@casais: '{self:1, rate:100, study:30, concept:1}'
+  ed@baruel: '{self:1, rate:100, study:90, concept:1, debug:1}'
+  ed@gomos: '{self:1, rate:83, study:60, concept:1}'
 flags:
   painel: 1
   quests: 0
@@ -34,4 +36,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@baruel
+selected: ed@alternando

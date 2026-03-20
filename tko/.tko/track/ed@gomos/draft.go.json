@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-19_17-27-40",
+            "content": "@@ -204,413 +204,10 @@\n can(\n-&cobra%5Bi%5D.x, &cobra%5Bi%5D.y)%0A    %7D%0A%0A    anterior := make(%5B%5Dponto, q)%0A    copy(anterior, cobra)%0A%0A    switch d %7B%0A    case %22L%22:%0A        cobra%5B0%5D.x--%0A    case %22R%22:%0A        cobra%5B0%5D.x++%0A    case %22U%22:%0A        cobra%5B0%5D.y--%0A    case %22d%22:%0A        cobra%5B0%5D.y++%0A    %7D%0A%0A    for i := 1; i %3C q; i++ %7B%0A        cobra%5Bi%5D = anterior%5Bi-1%5D%0A      %7D%0A    %0A    for i := 0; i %3C q; i++ %7B%0A        fmt.Println(cobra%5Bi%5D.x, cobra%5Bi%5D.y)%0A  \n+)%0A\n     \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-19_17-40-40",
+            "content": "@@ -427,9 +427,9 @@\n se %22\n-D\n+d\n %22:%0A \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-20_01-25-24",
+            "content": "package main\nimport \"fmt\"\n\ntype ponto struct {\n    x, y int\n}\n\nfunc main() {\n    var q int\n    var d string\n    fmt.Scan(&q, &d)\n\n    cobra := make([]ponto, q)\n\n    for i := 0; i < q; i++ {\n        fmt.Scan(&cobra[i].x, &cobra[i].y)\n    }\n\n    anterior := make([]ponto, q)\n    copy(anterior, cobra)\n\n    switch d {\n    case \"L\":\n        cobra[0].x--\n    case \"R\":\n        cobra[0].x++\n    case \"U\":\n        cobra[0].y--\n    case \"D\":\n        cobra[0].y++\n    }\n\n    for i := 1; i < q; i++ {\n        cobra[i] = anterior[i-1]\n      }\n    \n    for i := 0; i < q; i++ {\n        fmt.Println(cobra[i].x, cobra[i].y)\n      }\n}\n",
+            "lines": "40"
+        }
+    ]
+}

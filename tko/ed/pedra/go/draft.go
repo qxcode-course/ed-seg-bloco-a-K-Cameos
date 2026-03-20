@@ -5,6 +5,7 @@ import ("fmt"
 func main() {
     var n int
     fmt.Scan(&n)
+    
     maiorPontuacao := 101
     indiceVencedor := -1
 
