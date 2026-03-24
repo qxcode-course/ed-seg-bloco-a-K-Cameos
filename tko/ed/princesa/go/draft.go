@@ -20,7 +20,6 @@ func imprimirEstado(pessoas[]int, espada int) {
     fmt.Println()
 }
 
-
 func josephus(n int, e int){
     pessoas := make([]int, n)
     for i := 0; i<n; i++ {
@@ -33,7 +32,6 @@ para e-1. se comeca em 3 ajusta para 2.
 */
     for len(pessoas) > 1 {
         imprimirEstado(pessoas, espada)
-
         morto := (espada + 1) % len(pessoas)
 // o morto eh definido por onde a espada esta + 1
 // garantindo que caso seja a ultima, volta para o priemeiro indice
@@ -53,5 +51,4 @@ func main() {
     fmt.Scan(&n, &e)
 
     josephus(n, e)
-
 }

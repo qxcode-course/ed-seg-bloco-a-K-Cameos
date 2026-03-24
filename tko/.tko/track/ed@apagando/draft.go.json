@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-21_19-27-16",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,8 +37,6 @@\n ) %7B%0A\n-%09%0A\n %7D%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-03-22_23-41-19",
+            "content": "@@ -17,586 +17,29 @@\n ort \n-(%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A%09%22strings%22%0A)%0Afunc main() %7B%0A%09reader := bufio.NewReader(os.Stdin)%0A%09var n int%0A%09fmt.Fscanf(reader, %22%25d%5Cn%22, &n)%09%0A%09line1, _ := reader.ReadString('%5Cn')%0A%09filaInicial := strings.Fields(line1)%0A%0A%09var m int%0A%09fmt.Fscanf(reader, %22%25d%5Cn%22, &m)%0A%09line2, _ := reader.ReadString('%5Cn')%0A%09quemSaiu := strings.Fields(line2)%0A%0A%09saiuMap := make(map%5Bstring%5Dbool)%0A%09for _, id := range quemSaiu %7B%0A%09%09saiuMap%5Bid%5D = true%0A%09%7D%0A%0A%09var resultado %5B%5Dstring%0A%09for _, id := range filaInicial %7B%0A%09%09if !saiuMap%5Bid%5D %7B%0A%09%09%09resultado = append(resultado, id)%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(strings.Join(resultado, %22 %22))\n+%22fmt%22%0A%0Afunc main() %7B%0A%09\n %0A%7D%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-03-23_23-40-16",
+            "content": "@@ -101,17 +101,16 @@\n .Stdin)%0A\n-%0A\n %09var n i\n@@ -143,17 +143,17 @@\n %5Cn%22, &n)\n-%0A\n+%09\n %0A%09line1,\n@@ -264,17 +264,16 @@\n n%22, &m)%0A\n-%0A\n %09line2, \n@@ -597,22 +597,6 @@\n %22))%0A\n-%09fmt.Print(%22 %22)%0A\n %7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_23-42-01",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import (\n@@ -50,17 +50,16 @@\n ings%22%0A)%0A\n-%0A\n func mai\n@@ -557,52 +557,20 @@\n %7D%0A%0A%09\n-if len(resultado) %3E 0 %7B%0A%09%09fmt.Printf(%22%25s %22, \n+fmt.Println(\n stri\n@@ -599,19 +599,8 @@\n %22))%0A\n-%09%7D else %7B%0A%09\n %09fmt\n@@ -611,14 +611,10 @@\n nt(%22\n-%5Cn%22)%0A%09%7D\n+ %22)\n %0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-23_23-44-53",
+            "content": "@@ -625,18 +625,16 @@\n tado, %22 \n-%5Cn\n %22))%0A%09%7D e\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-23_23-45-29",
+            "content": "@@ -6,16 +6,17 @@\n ge main%0A\n+%0A\n import (\n@@ -51,16 +51,17 @@\n ings%22%0A)%0A\n+%0A\n func mai\n@@ -271,10 +271,9 @@\n &m)%0A\n-%09\n %0A\n+\n %09lin\n@@ -554,16 +554,42 @@\n %09%09%7D%0A%09%7D%0A%0A\n+%09if len(resultado) %3E 0 %7B%0A%09\n %09fmt.Pri\n@@ -594,11 +594,17 @@\n rint\n-ln(\n+f(%22%25s %22, \n stri\n@@ -629,10 +629,43 @@\n , %22 \n+%5Cn\n %22))%0A\n+%09%7D else %7B%0A%09%09fmt.Print(%22%5Cn%22)%0A%09%7D%0A\n %7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-23_23-46-32",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import (\n@@ -37,19 +37,29 @@\n %22%0A%09%22os%22%0A\n+%09%22strings%22%0A\n )%0A\n-%0A\n func mai\n@@ -65,18 +65,22 @@\n in() %7B%0A%09\n-in\n+reader\n  := bufi\n@@ -104,70 +104,16 @@\n din)\n-%0A%09out := bufio.NewWriter(os.Stdout)%0A%09defer out.Flush()\n %0A%0A%09var \n-N\n+n\n  int\n@@ -127,104 +127,113 @@\n scan\n-(in, &N\n+f(reader, %22%25d%5Cn%22, &n\n )%0A%0A%09\n-fila := make(%5B%5Dint, N)%0A%09for i := 0; i %3C N; i++ %7B%0A%09%09fmt.Fscan(in, &fila%5Bi%5D)%0A%09%7D\n+line1, _ := reader.ReadString('%5Cn')%0A%09filaInicial := strings.Fields(line1)\n %0A%0A%09var \n-M\n+m\n  int\n@@ -247,28 +247,113 @@\n scan\n-(in, &M\n+f(reader, %22%25d%5Cn%22, &m\n )%0A\n+%09\n %0A%09\n-removidos\n+line2, _ := reader.ReadString('%5Cn')%0A%09quemSaiu := strings.Fields(line2)%0A%0A%09saiuMap\n  := \n@@ -361,19 +361,22 @@\n ake(map%5B\n+str\n in\n-t\n+g\n %5Dbool)%0A%09\n@@ -383,149 +383,82 @@\n for \n-i := 0; i %3C M; i++ %7B%0A%09%09var x int%0A%09%09fmt.Fscan(in, &x)%0A%09%09removidos%5Bx%5D = true%0A%09%7D%0A%0A%09// Constru%C3%A7%C3%A3o da fila final%0A%09resultado := make(%5B%5Dint, 0, N-M)\n+_, id := range quemSaiu %7B%0A%09%09saiuMap%5Bid%5D = true%0A%09%7D%0A%0A%09var resultado %5B%5Dstring\n %0A%09fo\n@@ -462,22 +462,18 @@\n %09for _, \n-pessoa\n+id\n  := rang\n@@ -478,16 +478,23 @@\n nge fila\n+Inicial\n  %7B%0A%09%09if \n@@ -498,24 +498,18 @@\n if !\n-removidos%5Bpessoa\n+saiuMap%5Bid\n %5D %7B%0A\n@@ -545,14 +545,10 @@\n do, \n-pessoa\n+id\n )%0A%09%09\n@@ -558,85 +558,48 @@\n %7D%0A%0A%09\n-// Impress%C3%A3o%0A%09for _, val := range resultado %7B%0A%09%09fmt.Fprintf(out, %22%25d %22, val\n+fmt.Println(strings.Join(resultado, %22 %22)\n )%0A\n-%09\n %7D%0A\n-%7D\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-23_23-51-35",
+            "content": "@@ -656,20 +656,5 @@\n %0A%09%7D%0A\n-%09fmt.Println()%0A\n %7D\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_23-51-58",
+            "content": "@@ -6,16 +6,17 @@\n ge main%0A\n+%0A\n import (\n@@ -42,21 +42,11 @@\n os%22%0A\n-%09%22strconv%22%0A\n )%0A\n+%0A\n func\n@@ -56,23 +56,18 @@\n in() %7B%0A%09\n-scanner\n+in\n  := bufi\n@@ -75,13 +75,12 @@\n .New\n-Scann\n+Read\n er(o\n@@ -93,127 +93,98 @@\n n)%0A%09\n-scanner.Split(bufio.ScanWords)%0A%09%0A%09if !scanner.Scan() %7B%0A%09%09return%0A%09%7D%0A%09n, _ := strconv.Atoi(scanner.Text()\n+out := bufio.NewWriter(os.Stdout)%0A%09defer out.Flush()%0A%0A%09var N int%0A%09fmt.Fscan(in, &N\n )%0A\n-%09\n %0A%09fila\n-Inicial\n  := \n@@ -194,17 +194,14 @@\n e(%5B%5D\n-str\n in\n-g, n\n+t, N\n )%0A%09f\n@@ -215,17 +215,17 @@\n  0; i %3C \n-n\n+N\n ; i++ %7B%0A\n@@ -230,144 +230,77 @@\n %7B%0A%09%09\n-scanner.Scan()%0A%09%09filaInicial%5Bi%5D = scanner.Text(\n+fmt.Fscan(in, &fila%5Bi%5D\n )%0A%09%7D%0A\n-%09\n %0A%09\n-if !scanner.Scan() %7B%0A%09%09return%0A%09%7D%0A%09m, _ := strconv.Atoi(scanner.Text()\n+var M int%0A%09fmt.Fscan(in, &M\n )%0A\n-%09\n %0A%09\n-saiuMap\n+removidos\n  := \n@@ -312,14 +312,11 @@\n map%5B\n-str\n in\n-g\n+t\n %5Dboo\n@@ -335,17 +335,17 @@\n  0; i %3C \n-m\n+M\n ; i++ %7B%0A\n@@ -350,60 +350,126 @@\n %7B%0A%09%09\n-scanner.Scan()%0A%09%09saiuMap%5Bscanner.Text()%5D = true%0A%09%7D%0A%09\n+var x int%0A%09%09fmt.Fscan(in, &x)%0A%09%09removidos%5Bx%5D = true%0A%09%7D%0A%0A%09// Constru%C3%A7%C3%A3o da fila final%0A%09resultado := make(%5B%5Dint, 0, N-M)\n %0A%09fo\n@@ -473,18 +473,22 @@\n %09for _, \n-id\n+pessoa\n  := rang\n@@ -497,15 +497,8 @@\n fila\n-Inicial\n  %7B%0A%09\n@@ -506,55 +506,157 @@\n if !\n-saiuMap%5Bid%5D %7B%0A%09\n+removidos%5Bpessoa%5D %7B%0A%09%09%09resultado = append(resultado, pessoa)%0A%09%09%7D%0A%09%7D%0A%0A%09// Impress%C3%A3o%0A%09for _, val := range resultado %7B%0A\n %09%09fmt.\n-P\n+Fp\n rintf(\n+out, \n %22%25\n-s\n+d\n  %22, \n-id)%0A%09%09%7D%0A%09%7D%0A%09\n+val)%0A%09%7D\n %0A%09fm\n@@ -668,9 +668,8 @@\n ntln()%0A%7D\n-%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-24_00-02-37",
+            "content": "package main\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Split(bufio.ScanWords)\n\t\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\tn, _ := strconv.Atoi(scanner.Text())\n\t\n\tfilaInicial := make([]string, n)\n\tfor i := 0; i < n; i++ {\n\t\tscanner.Scan()\n\t\tfilaInicial[i] = scanner.Text()\n\t}\n\t\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\tm, _ := strconv.Atoi(scanner.Text())\n\t\n\tsaiuMap := make(map[string]bool)\n\tfor i := 0; i < m; i++ {\n\t\tscanner.Scan()\n\t\tsaiuMap[scanner.Text()] = true\n\t}\n\t\n\tfor _, id := range filaInicial {\n\t\tif !saiuMap[id] {\n\t\t\tfmt.Printf(\"%s \", id)\n\t\t}\n\t}\n\t\n\tfmt.Println()\n}\n",
+            "lines": "41"
+        }
+    ]
+}

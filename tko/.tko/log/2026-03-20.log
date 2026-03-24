@@ -12,3 +12,7 @@
 2026-03-20 01:51:18, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100
 2026-03-20 01:51:22, EXEC, v:1, k:ed@gomos, mode:FREE
 2026-03-20 01:52:05, SELF, v:1, k:ed@gomos, self:1, rate:83, study:60, concept:1
+2026-03-20 15:07:06, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-20 15:07:08, EXEC, v:1, k:ed@gomos, mode:FREE
+2026-03-20 15:07:39, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100
+2026-03-20 15:07:44, MOVE, v:1, k:ed@gomos, mode:BACK
