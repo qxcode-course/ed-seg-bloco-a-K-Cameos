@@ -1,0 +1,13 @@
+2026-03-31 13:02:22, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-03-31 13:10:06, EXEC, v:1, k:ed@buscas, mode:FULL, size:54, fail:COMP
+2026-03-31 13:11:35, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-03-31 13:11:37, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-03-31 13:12:10, EXEC, v:1, k:ed@buscas, mode:FREE, size:54
+2026-03-31 13:12:55, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0
+2026-03-31 13:13:11, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-03-31 13:22:09, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-03-31 13:35:31, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-03-31 13:35:33, EXEC, v:1, k:ed@buscas, mode:FULL, size:58, fail:COMP
+2026-03-31 13:36:16, EXEC, v:1, k:ed@buscas, mode:FULL, rate:100, size:58
+2026-03-31 13:36:29, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-03-31 13:38:03, SELF, v:1, k:ed@buscas, self:1, rate:100, study:80, concept:1
