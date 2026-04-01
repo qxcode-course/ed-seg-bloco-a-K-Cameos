@@ -1,0 +1,32 @@
+2026-04-01 16:23:55, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 19:14:54, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 19:14:56, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-01 19:15:00, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 19:15:12, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-01 19:15:14, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 19:16:16, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-01 19:16:43, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 19:17:11, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-01 19:17:13, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 19:26:08, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-01 19:26:18, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 19:31:04, EXEC, v:1, k:ed@manipulacao, mode:FULL, size:146, fail:COMP
+2026-04-01 19:32:03, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:0, size:145
+2026-04-01 19:34:19, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-01 19:34:22, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 19:34:30, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-01 19:34:35, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 19:35:32, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:145
+2026-04-01 19:48:34, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 19:48:55, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:100, size:145
+2026-04-01 19:49:00, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-01 19:49:02, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 19:56:30, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-01 19:56:32, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 19:56:38, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-01 19:56:48, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 20:01:48, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-01 20:01:51, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 20:01:56, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-01 20:06:08, SELF, v:1, k:ed@manipulacao, self:1, rate:100, study:45, concept:1, problem:1
+2026-04-01 20:06:24, MOVE, v:1, k:ed@rotacoes, mode:DOWN

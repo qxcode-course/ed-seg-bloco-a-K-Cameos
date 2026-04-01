@@ -6,41 +6,81 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"sort"
 )
 
 func getMen(vet []int) []int {
-	_ = vet
-	return nil
+	var res []int
+	for _, v := range vet {
+		if v > 0 {
+			res = append(res, v)
+		}
+	}
+	return res
 }
 
 func getCalmWomen(vet []int) []int {
-	_ = vet
-	return nil
+	var res []int
+	for _, v := range vet {
+		if v < 0 && v > -10 {
+			res = append(res, v)
+		}
+	}
+	return res
 }
 
 func sortVet(vet []int) []int {
-	_ = vet
-	return nil
+	res := make([]int, len(vet))
+	copy(res, vet)
+	sort.Ints(res)
+	return res
 }
+
+func abs(n int) int {
+	if n < 0 {
+		return -n
+	}
+	return n
+}	
 
 func sortStress(vet []int) []int {
-	_ = vet
-	return nil
+	res := make([]int, len(vet))
+	copy(res, vet)
+	sort.SliceStable(res, func(i, j int) bool {
+		return abs(res[i]) < abs(res[j])
+	})
+	return res
 }
 
-func reverse(vet []int) []int {
-	_ = vet
-	return nil
+func reverse(vet []int) []int {	res := make ([]int, len(vet))
+	for i := 0; i < len(vet); i++ {
+		res[i] = vet[len(vet)-1-i]
+	}
+	return res
 }
 
 func unique(vet []int) []int {
-	_ = vet
-	return nil
+	var res []int
+	seen := make(map[int]bool)
+	for _, v := range vet {
+		if !seen[v] {
+			seen[v] = true
+			res = append(res, v)
+		}
+	}
+	return res
 }
 
 func repeated(vet []int) []int {
-	_ = vet
-	return nil
+	var res []int
+	seen := make(map[int]int)
+	for _, v := range vet {
+		seen[v]++
+		if seen[v] > 1 {
+			res = append(res, v)
+		}
+	}
+	return res
 }
 
 func main() {
@@ -103,4 +143,3 @@ func str2vet(s string) []int {
 	}
 	return vet
 }
-
