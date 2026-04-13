@@ -22,13 +22,13 @@ sources:
   quests: null
   tasks: null
 expanded:
+- ed@backtrack
+- ed@map_set
+- ed@dfs
+- ed@rec
 - ed@basic
 - eval1@teste-1
 - ed@bfs
-- ed@backtrack
-- ed@rec
-- ed@dfs
-- ed@map_set
 flags:
   inbox: all
   panel: help
@@ -36,4 +36,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: eval1@baruel
+selected: eval1@casais

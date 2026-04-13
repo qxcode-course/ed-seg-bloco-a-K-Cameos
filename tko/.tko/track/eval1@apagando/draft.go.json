@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_22-15-29",
+            "content": "@@ -173,17 +173,16 @@\n  := make\n- \n (map%5Bstr\n@@ -195,17 +195,17 @@\n ruct%7B%7D, \n-m\n+n\n )%0A%09for i\n@@ -217,16 +217,17 @@\n ; i %3C m;\n+ \n i++ %7B%0A%09%09\n@@ -290,10 +290,9 @@\n %0A%09%7D%0A\n-%09\n %0A\n+\n %09for\n@@ -356,19 +356,17 @@\n %09fmt.Pri\n-ntl\n+t\n n(num, %22\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-13_22-18-26",
+            "content": "@@ -286,16 +286,17 @@\n %7B%7D%7B%7D%0A%09%7D%0A\n+%09\n %0A%09for _,\n@@ -389,14 +389,16 @@\n mt.Print\n+ln\n ()%0A%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-13_22-20-16",
+            "content": "@@ -358,16 +358,18 @@\n mt.Print\n+ln\n (num, %22 \n@@ -388,16 +388,14 @@\n mt.Print\n-ln\n ()%0A%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-13_22-24-44",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\n\tfila := make([]string, n)\n\tfor i := range fila {\n\t\tfmt.Scan(&fila[i])\n\t}\n\n\tvar m int\n\tfmt.Scan(&m)\n\n\tfora := make (map[string]struct{}, m)\n\tfor i := 0; i < m;i++ {\n\t\tvar num string\n\t\tfmt.Scan(&num)\n\t\tfora[num] = struct{}{}\n\t}\n\n\tfor _, num := range fila {\n\t\tif _, ok := fora[num]; !ok {\n\t\t\tfmt.Print(num, \" \")\n\t\t}\n\t}\n\tfmt.Println()\n\n}\n",
+            "lines": "29"
+        }
+    ]
+}
