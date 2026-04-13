@@ -49,3 +49,12 @@
 2026-04-13 21:57:32, EXEC, v:1, k:eval1@casais, mode:FULL, rate:100, size:37
 2026-04-13 21:57:34, MOVE, v:1, k:eval1@casais, mode:BACK
 2026-04-13 21:57:45, SELF, v:1, k:eval1@casais, self:1, rate:100, study:20
+2026-04-13 22:00:28, MOVE, v:1, k:eval1@apagando, mode:DOWN
+2026-04-13 22:00:30, MOVE, v:1, k:eval1@apagando, mode:PICK
+2026-04-13 22:00:45, MOVE, v:1, k:eval1@apagando, mode:BACK
+2026-04-13 22:01:19, SELF, v:1, k:eval1@baruel, self:1, rate:100, study:40
+2026-04-13 21:56:57, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-13 21:57:31, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-13 22:00:28, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-13 22:00:28, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-13 22:00:28, MOVE, v:1, k:eval1@apagando, mode:EDIT
