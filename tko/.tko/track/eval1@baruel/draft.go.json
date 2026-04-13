@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_20-54-21",
+            "content": "@@ -252,16 +252,17 @@\n tln()%0A%7D%0A\n+v\n %0Afunc ma\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-13_20-55-52",
+            "content": "@@ -306,23 +306,10 @@\n (&qt\n-)%0A    fmt.Scan(\n+, \n &qp)\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-13_21-00-31",
+            "content": "@@ -379,17 +379,17 @@\n 0; i %3C q\n-p\n+t\n ; i++ %7B%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-04-13_21-04-53",
+            "content": "package main\nimport \"fmt\"\n\nfunc printLista(nums []int) {\n    if len(nums) == 0 {\n        fmt.Println(\"N\")\n        return\n    }\n    for i, v := range nums {\n        if i > 0 {\n            fmt.Print(\" \")\n        }\n        fmt.Print(v)\n    }\n    fmt.Println()\n}\n\nfunc main() {\n    var qt, qp int\n    fmt.Scan(&qt)\n    fmt.Scan(&qp)\n    \n    freq := make(map[int]int)\n\n    for i := 0; i < qp; i++ {\n        var y int\n        fmt.Scan(&y)\n        freq[y]++\n    }\n\n    var repetidas []int\n    var faltando []int\n\n    for i := 1; i <= qt; i++ {\n        if freq[i] > 1 {\n            for j := 0; j < freq[i]-1; j++ {\n                repetidas = append(repetidas, i)\n            }\n        }\n\n        if freq[i] == 0 {\n            faltando = append(faltando, i)\n        }\n    }\n\n    printLista(repetidas)\n    printLista(faltando)\n}\n",
+            "lines": "48"
+        }
+    ]
+}

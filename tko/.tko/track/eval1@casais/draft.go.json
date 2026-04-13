@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_21-54-04",
+            "content": "@@ -87,16 +87,8 @@\n (map\n-%5Bint%5Dint\n )%0A  \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-13_21-57-31",
+            "content": "package main\nimport \"fmt\"\nfunc contandoPares(animais []int) int {\n    ncasados := make(map[int]int)\n    totalCasais := 0\n\n    for _, animal := range animais {\n        oposto := -animal\n\n        if ncasados[oposto] > 0 {\n            ncasados[oposto]--\n            totalCasais++\n        } else {\n            ncasados[animal]++\n        }\n    }\n\n    return totalCasais\n}\n\nfunc lendoEntrada() []int {\n    var n int\n    fmt.Scan(&n)\n\n    animais := make([]int, n)\n    for i := range animais {\n        fmt.Scan(&animais[i])\n    }\n\n    return animais\n}\n\nfunc main() {\n    animais := lendoEntrada()\n    resultado := contandoPares(animais)\n    fmt.Println(resultado)    \n}\n",
+            "lines": "37"
+        }
+    ]
+}

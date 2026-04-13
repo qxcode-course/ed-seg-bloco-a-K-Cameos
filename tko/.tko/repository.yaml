@@ -14,103 +14,21 @@ sources:
   writeable: false
   quests: null
   tasks: null
+- name: eval1
+  target: https://github.com/senapk/eval_26_ed_1
+  index: README.md
+  type: git
+  writeable: false
+  quests: null
+  tasks: null
 expanded:
-- ed@map_set
-- ed@rec
+- ed@basic
+- eval1@teste-1
+- ed@bfs
 - ed@backtrack
-tasks:
-  ed@pintando: '{self:1, rate:100, study:30}'
-  ed@mumia: '{self:1, rate:100, study:30}'
-  ed@fuga: '{self:1, rate:100, study:35}'
-  ed@pedra: '{self:1, rate:100, study:50}'
-  ed@casais: '{self:1, rate:100, study:30, concept:1}'
-  ed@baruel: '{self:1, rate:100, study:90, concept:1, debug:1}'
-  ed@gomos: '{self:1, rate:100, study:60, concept:1}'
-  ed@princesa: '{self:1, rate:100, study:60, concept:1}'
-  ed@apagando: '{self:1, rate:100, study:70, concept:1}'
-  ed@manipulacao: '{self:1, rate:100, study:45, concept:1, problem:1}'
-  ed@buscas: '{self:1, rate:100, study:80, concept:1}'
-  ed@analise: '{}'
-  ed@especiais: '{}'
-  ed@rotacoes: '{}'
-  ed@alternando: '{}'
-  ed@crec_view: '{}'
-  ed@rec_read: '{}'
-  ed@fractais_png: '{}'
-  ed@triangulo: '{}'
-  ed@treinando: '{}'
-  ed@resto: '{}'
-  ed@mdc: '{}'
-  ed@queimada: '{}'
-  ed@labirinto: '{}'
-  ed@eh_primo: '{}'
-  ed@enesimo: '{}'
-  ed@vetequals: '{}'
-  ed@priminhos: '{}'
-  ed@escada: '{}'
-  ed@binomiais: '{}'
-  ed@diagonal: '{}'
-  ed@sufixos: '{}'
-  ed@padroes1: '{}'
-  ed@padroes2: '{}'
-  ed@padroes3: '{}'
-  ed@quadrado: '{}'
-  ed@fib1: '{}'
-  ed@fib2: '{}'
-  ed@santo: '{}'
-  ed@bitcoin: '{}'
-  ed@fractais: '{}'
-  ed@wordsearch: '{}'
-  ed@subset_sum: '{}'
-  ed@distancia: '{}'
-  ed@permutacoes: '{}'
-  ed@sudoku: '{}'
-  ed@n_rainhas: '{}'
-  ed@vetbuild: '{}'
-  ed@setbuild: '{}'
-  ed@bettersearch: '{}'
-  ed@multiset: '{}'
-  ed@magicsearch: '{}'
-  ed@iterador: '{}'
-  ed@lista_d1: '{}'
-  ed@lista_d2: '{}'
-  ed@lista_d4: '{}'
-  ed@prin_list1: '{}'
-  ed@editor: '{}'
-  ed@lista_d3: '{}'
-  ed@prin_list2: '{}'
-  ed@controlz: '{}'
-  ed@editorint: '{}'
-  ed@bufferring: '{}'
-  ed@fila_enc: '{}'
-  ed@pilha: '{}'
-  ed@chaves: '{}'
-  ed@queimando: '{}'
-  ed@pilhado: '{}'
-  ed@balanceada: '{}'
-  ed@caminhao: '{}'
-  ed@polonesa: '{}'
-  ed@serial: '{}'
-  ed@formatada: '{}'
-  ed@inverter: '{}'
-  ed@clonar: '{}'
-  ed@soma: '{}'
-  ed@altura: '{}'
-  ed@compare: '{}'
-  ed@arvore-path: '{}'
-  ed@bst_insert: '{}'
-  ed@bst_serial: '{}'
-  ed@bst_remove: '{}'
-  ed@dfs_bfs_bak: '{}'
-  ed@ilhas: '{}'
-  ed@cercado: '{}'
-  ed@pintura: '{}'
-  ed@longest: '{}'
-  ed@battleship: '{}'
-  ed@rotten: '{}'
-  ed@caminho: '{}'
-  ed@detonate: '{}'
-  ed@escapeSpread: '{}'
+- ed@rec
+- ed@dfs
+- ed@map_set
 flags:
   inbox: all
   panel: help
@@ -118,4 +36,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@rotacoes
+selected: eval1@casais
