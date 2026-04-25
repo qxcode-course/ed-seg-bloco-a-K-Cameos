@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-25_17-24-21",
+            "content": "@@ -385,33 +385,32 @@\n  0 %7B%0A%09%09return %22%5B\n-%5D\n %22%0A%09%7D%0A%0A%09var rec f\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-04-25_17-24-34",
+            "content": "@@ -535,17 +535,16 @@\n 1:%5D) + %22\n-,\n  %22 + str\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-04-25_17-25-29",
+            "content": "@@ -276,17 +276,16 @@\n %5B0%5D) + %22\n-,\n  %22 + rec\n@@ -531,24 +531,25 @@\n c(v%5B1:%5D) + %22\n+,\n  %22 + strconv\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-04-25_17-28-11",
+            "content": "@@ -532,25 +532,24 @@\n c(v%5B1:%5D) + %22\n-,\n  %22 + strconv\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-04-25_17-28-34",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc tostr(vet []int) string {\n\tif len(vet) == 0 {\n\t\treturn \"[]\"\n\t}\n\n\tvar rec func(v []int) string \n\trec = func(v []int) string {\n\t\tif len(v) == 1 {\n\t\t\treturn strconv.Itoa(v[0])\n\t\t}\n\t\treturn strconv.Itoa(v[0]) + \", \" + rec(v[1:])\n\t}\n\n\treturn \"[\" + rec(vet) + \"]\"\n}\n\nfunc tostrrev(vet []int) string {\n\tif len(vet) == 0 {\n\t\treturn \"[]\"\n\t}\n\n\tvar rec func(v []int) string\n\trec = func(v []int) string {\n\t\tif len(v) == 1 {\n\t\t\treturn strconv.Itoa(v[0])\n\t\t}\n\t\treturn rec(v[1:]) + \", \" + strconv.Itoa(v[0])\n\t}\n\treturn \"[\" + rec(vet) + \"]\"\n}\n// reverse: inverte os elementos do slice\nfunc reverse(vet []int) {\n\tif len(vet) <= 1 {\n\t\treturn\n\t}\n\n\tvet[0], vet[len(vet)-1] = vet[len(vet)-1], vet[0]\n\treverse(vet[1 : len(vet)-1])\n}\n\n// sum: soma dos elementos do slice\nfunc sum(vet []int) int {\n\tif len(vet) == 0 {\n\t\treturn 0\n\t}\n\treturn vet[0] + sum(vet[1:])\n}\n\n// mult: produto dos elementos do slice\nfunc mult(vet []int) int {\n\tif len(vet) == 0 {\n\t\treturn 1\n\t}\n\treturn vet[0] * mult(vet[1:])\n}\n\n// min: retorna o \u00edndice e valor do menor valor\nfunc min(vet []int) int {\n\tif len(vet) == 0 {\n\t\treturn -1\n\t}\n\tvar rec func(v []int) (int, int)\n\trec = func(v []int) (int, int) {\n\t\tif len(v) == 1 {\n\t\t\treturn 0, v[0]\n\t\t}\n\n\t\tidxRest, valRest := rec(v[1:])\n\t\tif v[0] <= valRest {\n\t\t\treturn 0, v[0]\n\t\t}\n\t\treturn idxRest + 1, valRest\n\t}\n\tidx, _ := rec(vet)\n\treturn idx\n}\n\nfunc main() {\n\tvar vet []int\n\tscanner := bufio.NewScanner(os.Stdin)\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\targs := strings.Fields(line)\n\t\tfmt.Println(\"$\" + line)\n\n\t\tswitch args[0] {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"read\":\n\t\t\tvet = nil\n\t\t\tfor _, arg := range args[1:] {\n\t\t\t\tif val, err := strconv.Atoi(arg); err == nil {\n\t\t\t\t\tvet = append(vet, val)\n\t\t\t\t}\n\t\t\t}\n\t\tcase \"tostr\":\n\t\t\tfmt.Println(tostr(vet))\n\t\tcase \"torev\":\n\t\t\tfmt.Println(tostrrev(vet))\n\t\tcase \"reverse\":\n\t\t\treverse(vet)\n\t\tcase \"sum\":\n\t\t\tfmt.Println(sum(vet))\n\t\tcase \"mult\":\n\t\t\tfmt.Println(mult(vet))\n\t\tcase \"min\":\n\t\t\tfmt.Println(min(vet))\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "125"
+        }
+    ]
+}
