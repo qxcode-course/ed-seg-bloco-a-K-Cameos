@@ -28,7 +28,7 @@ func tostrrev(vet []int) string {
 	if len(vet) == 0 {
 		return "[]"
 	}
-
+//
 	var rec func(v []int) string
 	rec = func(v []int) string {
 		if len(v) == 1 {
