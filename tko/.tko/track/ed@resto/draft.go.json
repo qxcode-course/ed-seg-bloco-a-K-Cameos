@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-27_19-03-07",
+            "content": "@@ -77,17 +77,16 @@\n o int%0A%7D%0A\n-%0A\n func mai\n@@ -425,44 +425,6 @@\n    %0A\n-    fmt.Println(%22Quociente e Resto:%22)%0A\n %7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-27_19-12-04",
+            "content": "@@ -207,17 +207,17 @@\n tados %5B%5D\n-D\n+d\n ivisao%0A%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-27_19-12-12",
+            "content": "@@ -425,130 +425,45 @@\n     \n-for i:= len(resultados) - 1; i %3E= 0; i-- %7B%0A        fmt.Println(resultados%5Bnumero%5D.quociente, resultados%5Bi%5D.resto)%0A    %7D    \n+%0A    fmt.Println(%22Quociente e Resto:%22)\n %0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-27_19-26-50",
+            "content": "@@ -495,17 +495,22 @@\n ultados%5B\n-i\n+numero\n %5D.quocie\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-27_19-27-13",
+            "content": "package main\nimport \"fmt\"\n\n\ntype Divisao struct {\n    quociente int\n    resto int\n}\n\nfunc main() {\n    var numero int\n\n    _, err := fmt.Scan(&numero)\n    if err != nil {\n        return\n    }\n\n    var resultados []Divisao\n\n    for numero > 0 {\n        quociente := numero / 2\n        resto := numero % 2\n\n        resultados = append(resultados, Divisao{quociente: quociente, resto: resto})\n\n        numero = quociente\n    }\n    for i:= len(resultados) - 1; i >= 0; i-- {\n        fmt.Println(resultados[i].quociente, resultados[i].resto)\n    }    \n}\n",
+            "lines": "31"
+        }
+    ]
+}

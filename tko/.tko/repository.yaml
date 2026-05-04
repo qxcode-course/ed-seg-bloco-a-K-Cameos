@@ -23,18 +23,23 @@ sources:
   tasks: null
 expanded:
 - ed@rec
-- ed@dfs
-- ed@bfs
-- ed@backtrack
-- ed@basic
 - ed@vector
+- ed@basic
 - ed@map_set
+- ed@dfs
+- ed@sandbox
+- ed@tree
+- ed@backtrack
+- ed@list
+- eval1@eval1
+- ed@bfs
+- ed@linear
 flags:
   inbox: all
-  panel: help
+  panel: graph
   show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@triangulo
-selected_index: 19
+selected: ed@editorint
+selected_index: 65

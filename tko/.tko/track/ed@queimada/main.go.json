@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-04_13-18-30",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\t_, _, _ = grid, l, c\n\tnl := len(grid)\n\tnc := len(grid[0])\n\t_, _ = nl, nc\n\tif c < 0 || c >= nc || l < 0 || l >= nl {\n\t\treturn\n\t}\n\tif grid[l][c] != '#' {\n\t\treturn\n\t}\n\tgrid[l][c] = 'o'\n\tburnTrees(grid, l-1, c)\n\tburnTrees(grid, l+1, c)\n\tburnTrees(grid, l, c-1)\n\tburnTrees(grid, l, c+1)\n\t\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(grid [][]rune) {\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "49"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-28_19-24-08",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc mdc(a, b int) int {\n\tif b == 0{\n\treturn a\n\t}\n\treturn mdc(b, a%b)\n}\n\nfunc main() {\n\tvar a, b int\n\t_, err := fmt.Scan(&a, &b)\n\tif err != nil {\n\t\treturn\n\t}\n\t\n\tfmt.Println(mdc(a, b))\n}\n",
+            "lines": "22"
+        }
+    ]
+}
