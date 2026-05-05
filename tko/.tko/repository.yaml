@@ -23,17 +23,12 @@ sources:
   tasks: null
 expanded:
 - ed@rec
-- ed@vector
-- ed@basic
-- ed@map_set
-- ed@dfs
-- ed@sandbox
-- ed@tree
-- ed@backtrack
-- ed@list
 - eval1@eval1
 - ed@bfs
-- ed@linear
+- ed@basic
+- ed@list
+- ed@sandbox
+- ed@map_set
 flags:
   inbox: all
   panel: graph
@@ -42,4 +37,4 @@ flags:
   show_time: 'true'
 lang: go
 selected: ed@editorint
-selected_index: 65
+selected_index: 53

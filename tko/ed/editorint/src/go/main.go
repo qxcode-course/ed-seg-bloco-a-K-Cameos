@@ -46,12 +46,12 @@ func (e *Editor) KeyEnter() {
 }
 
 func (e *Editor) KeyRight() {
-	if e.cursor != e.line.Value.End() { //cursor não está no final da linha
-		e.cursor = e.cursor.Next() // cursor para a direita
+	if e.cursor != e.line.Value.End() {
+		e.cursor = e.cursor.Next()
 		return
 	}
 
-	if e.line != e.lines.End() { 
+	if e.line != e.lines.Back() { 
 		e.line = e.line.Next()   
 		e.cursor = e.line.Value.Front() 
 	}
@@ -84,16 +84,62 @@ func (e *Editor) KeyDown() {
 }
 
 func (e *Editor) KeyBackspace() {
-	if e.cursor != e.line.Value.Front() { // Se o cursor não está no início da linha
-		e.cursor = e.line.Value.Erase(e.cursor.Prev())
-		e.line.Value.Erase(e.cursor)
+	if e.cursor != e.line.Value.Front() {
+		prev := e.cursor.Prev()
+		e.line.Value.Erase(prev)
 		return
 	}
 	if e.line != e.lines.Front() { 
-		
+		prevLineNode := e.line.Prev()
+		prevLine := prevLineNode.Value
+		currentLine := e.line.Value
+
+		var newCursor *Node[rune]
+
+		it := currentLine.Front()
+		for it != currentLine.End() {
+			inserted := prevLine.Insert(prevLine.End(), it.Value)
+			if newCursor == nil {
+				newCursor = inserted
+			}
+			it = it.Next()
+		}
+
+		if newCursor == nil {
+			newCursor = prevLine.End()
+		}
+		e.lines.Erase(e.line)
+		e.line = prevLineNode
+		e.cursor = newCursor
+	}
 }
-}
+
 func (e *Editor) KeyDelete() {
+	if e.cursor != e.line.Value.End() {
+		e.cursor = e.line.Value.Erase(e.cursor)
+		return
+	}
+	if e.line != e.lines.Back() { 
+		nextLineNode := e.line.Next()
+		nextLine := nextLineNode.Value
+
+		var firstInserted *Node[rune]
+
+		it := nextLine.Front()
+		for it != nextLine.End() {
+			inserted := e.line.Value.Insert(e.line.Value.End(), it.Value)
+			if firstInserted == nil {
+				firstInserted = inserted
+			}
+			it = it.Next()
+		}
+
+		if firstInserted == nil {
+			firstInserted = e.line.Value.End()
+		}
+		e.lines.Erase(nextLineNode)
+		e.cursor = firstInserted
+	}
 }
 
 func main() {
