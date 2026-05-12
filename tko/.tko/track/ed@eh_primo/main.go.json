@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-12_20-07-09",
+            "content": "@@ -138,135 +138,36 @@\n  %7B%0A%09\n-if x %3C= 1 %7B%0A%09%09return false%0A%09%7D%0A%09if div*div %3E x %7B%0A%09%09return false%0A%09%7D%0A%09if x%25div == 0 %7B%0A%09%09return false%0A%09%7D%0A%09return eh_primo(x, div+1)\n+_, _ = x, div%0A%09return false;\n %0A%7D%0A%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-05-12_20-08-44",
+            "content": "@@ -191,19 +191,20 @@\n %09return \n-tru\n+fals\n e%0A%09%7D%0A%09if\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-05-12_20-09-55",
+            "content": "package main\n\nimport \"fmt\"\n\n// x: n\u00famero que est\u00e1 sendo testado\n// div: divisor que est\u00e1 sendo testado\nfunc eh_primo(x int, div int) bool {\n\tif x <= 1 {\n\t\treturn false\n\t}\n\tif div*div > x {\n\t\treturn true\n\t}\n\tif x%div == 0 {\n\t\treturn false\n\t}\n\treturn eh_primo(x, div+1)\n}\n\nfunc main() {\n\tvar x int\n\tfmt.Scan(&x)\n\tif eh_primo(x, 2) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "28"
+        }
+    ]
+}

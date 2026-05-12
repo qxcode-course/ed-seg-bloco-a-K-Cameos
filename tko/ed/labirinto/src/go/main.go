@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"os"
 )
-
 type Pos struct {
 	l, c int
 }
@@ -31,6 +30,17 @@ func search(grid [][]rune, curr, endPos Pos) bool {
 	if !match(grid, curr, ' ') {
 		return false
 	}
+
+	grid[curr.l][curr.c] = '.'
+
+	for _, n := range getNeig(curr) {
+		if search(grid, n, endPos) {
+			return true
+		}
+	}
+
+	grid[curr.l][curr.c] = ' '
+	return false
 } 
 
 func main() {

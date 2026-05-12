@@ -22,19 +22,19 @@ sources:
   quests: null
   tasks: null
 expanded:
+- ed@map_set
+- ed@linear
+- ed@list
+- ed@basic
 - ed@rec
 - eval1@eval1
 - ed@bfs
-- ed@basic
-- ed@list
-- ed@sandbox
-- ed@map_set
 flags:
   inbox: all
-  panel: graph
+  panel: help
   show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@editorint
-selected_index: 53
+selected: ed@eh_primo
+selected_index: 25
