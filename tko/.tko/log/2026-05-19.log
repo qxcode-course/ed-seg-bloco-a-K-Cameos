@@ -1,0 +1,35 @@
+2026-05-19 18:57:15, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-19 18:57:17, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-19 18:57:45, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-19 19:00:14, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-19 19:00:28, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-19 18:59:16, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-05-19 19:17:14, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-05-19 19:25:05, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-19 19:25:15, EXEC, v:1, k:ed@vetbuild, mode:FULL, size:130, fail:COMP
+2026-05-19 19:25:15, EXEC, v:1, k:ed@vetbuild, mode:FREE, size:130
+2026-05-19 19:25:10, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-05-19 19:29:38, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-05-19 19:31:22, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-05-19 19:38:29, EXEC, v:1, k:ed@vetbuild, mode:FREE, size:137
+2026-05-19 19:38:37, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-19 19:38:36, MOVE, v:1, k:ed@vetbuild, mode:EDIT
+2026-05-19 19:41:29, MOVE, v:1, k:ed@prin_list2, mode:DOWN
+2026-05-19 19:41:29, MOVE, v:1, k:ed@prin_list2, mode:PICK
+2026-05-19 19:41:31, MOVE, v:1, k:ed@prin_list2, mode:BACK
+2026-05-19 19:41:34, MOVE, v:1, k:ed@prin_list1, mode:DOWN
+2026-05-19 19:41:35, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-05-19 19:41:36, EXEC, v:1, k:ed@prin_list1, mode:FULL, size:172, fail:COMP
+2026-05-19 19:41:42, MOVE, v:1, k:ed@prin_list1, mode:BACK
+2026-05-19 19:41:44, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-05-19 19:41:44, EXEC, v:1, k:ed@prin_list1, mode:FULL, fail:COMP
+2026-05-19 19:41:59, EXEC, v:1, k:ed@prin_list1, mode:LOCK, rate:0, size:172
+2026-05-19 19:43:28, MOVE, v:1, k:ed@prin_list1, mode:BACK
+2026-05-19 19:41:29, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-05-19 19:41:29, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-05-19 19:41:29, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-05-19 19:41:34, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-05-19 19:41:34, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-05-19 19:41:56, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-05-19 19:41:59, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-05-19 19:48:16, MOVE, v:1, k:ed@vetbuild, mode:EDIT

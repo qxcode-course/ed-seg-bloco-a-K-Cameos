@@ -1,0 +1,40 @@
+2026-05-22 00:10:02, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-05-22 00:20:38, MOVE, v:1, k:ed@enesimo, mode:PICK
+2026-05-22 00:20:40, MOVE, v:1, k:ed@enesimo, mode:BACK
+2026-05-22 00:20:47, MOVE, v:1, k:ed@enesimo, mode:PICK
+2026-05-22 00:25:20, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-05-22 00:35:29, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-05-22 00:36:08, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-05-22 00:41:55, EXEC, v:1, k:ed@enesimo, mode:FULL, size:35, fail:COMP
+2026-05-22 00:45:18, EXEC, v:1, k:ed@enesimo, mode:FULL, rate:100, size:39
+2026-05-22 00:45:24, MOVE, v:1, k:ed@enesimo, mode:BACK
+2026-05-22 00:45:52, SELF, v:1, k:ed@enesimo, self:1, rate:100, study:50
+2026-05-22 00:45:55, MOVE, v:1, k:ed@priminhos, mode:DOWN
+2026-05-22 00:45:57, MOVE, v:1, k:ed@priminhos, mode:PICK
+2026-05-22 01:09:41, MOVE, v:1, k:ed@priminhos, mode:PICK
+2026-05-22 01:09:48, MOVE, v:1, k:ed@priminhos, mode:BACK
+2026-05-22 01:10:01, MOVE, v:1, k:ed@priminhos, mode:PICK
+2026-05-22 01:12:50, MOVE, v:1, k:ed@priminhos, mode:BACK
+2026-05-22 01:12:53, MOVE, v:1, k:ed@priminhos, mode:PICK
+2026-05-22 01:14:53, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-05-22 01:19:29, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-05-22 01:21:41, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-05-22 01:37:19, MOVE, v:1, k:ed@priminhos, mode:PICK
+2026-05-22 01:37:20, MOVE, v:1, k:ed@priminhos, mode:BACK
+2026-05-22 01:37:43, MOVE, v:1, k:ed@priminhos, mode:PICK
+2026-05-22 01:42:24, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-05-22 01:47:24, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-05-22 01:48:55, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:0, size:37
+2026-05-22 01:49:15, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:25, size:37
+2026-05-22 01:50:02, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:25
+2026-05-22 01:50:28, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:25, size:37
+2026-05-22 01:50:36, EXEC, v:1, k:ed@priminhos, mode:FREE
+2026-05-22 01:50:48, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:25, size:37
+2026-05-22 01:51:24, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:0, size:37
+2026-05-22 01:52:09, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:25, size:37
+2026-05-22 01:51:39, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-05-22 01:52:08, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-05-22 01:55:48, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:0, size:44
+2026-05-22 01:56:05, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:100, size:44
+2026-05-22 01:56:06, MOVE, v:1, k:ed@priminhos, mode:BACK
+2026-05-22 01:57:12, SELF, v:1, k:ed@priminhos, self:1, rate:100, study:70

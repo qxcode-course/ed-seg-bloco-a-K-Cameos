@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-22_00-41-55",
+            "content": "@@ -256,70 +256,8 @@\n %0A%7D%0A%0A\n-func eh_primo(num int) bool %7B%0A    return aux_primo(num, 2)%0A%7D%0A%0A\n func\n@@ -633,16 +633,18 @@\n _primo(n\n++1\n ))%0A    %7D\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-22_00-45-18",
+            "content": "package main\nimport \"fmt\"\nfunc aux_primo(num, divisor int) bool {\n    if num < 2 {\n        return false\n    }\n    if divisor*divisor > num {\n        return true\n    }\n    if num%divisor == 0{\n        return false\n    }\n    return aux_primo(num, divisor+1)\n}\n\nfunc eh_primo(num int) bool {\n    return aux_primo(num, 2)\n}\n\nfunc aux_ene(n, atual, encontrados int) int {\n    if eh_primo(atual) {\n        encontrados++\n        if encontrados == n {\n            return atual\n        }\n    }\n    return aux_ene(n, atual+1, encontrados)\n}\nfunc n_primo(n int) int {\n    return aux_ene(n, 2, 0)\n}\nfunc main() {\n    var n int \n\n    _, err := fmt.Scan(&n)\n    if err == nil && n > 0 {\n        fmt.Println(n_primo(n))\n    } \n}\n",
+            "lines": "39"
+        }
+    ]
+}

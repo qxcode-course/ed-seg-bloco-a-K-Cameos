@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-22_01-48-55",
+            "content": "@@ -144,35 +144,36 @@\n %0A        return \n-tru\n+fals\n e%0A    %7D%0A    if n\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-22_01-49-15",
+            "content": "@@ -87,36 +87,35 @@\n %0A        return \n-fals\n+tru\n e%0A    %7D%0A    if d\n@@ -574,17 +574,16 @@\n intln(%22%5B\n- \n %5D%22)%0A    \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-22_01-50-28",
+            "content": "@@ -575,16 +575,17 @@\n intln(%22%5B\n+ \n %5D%22)%0A    \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-22_01-50-48",
+            "content": "@@ -659,17 +659,16 @@\n intf(%22%25v\n-,\n %5Cn%22, res\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-22_01-51-24",
+            "content": "@@ -659,16 +659,17 @@\n intf(%22%25v\n+,\n %5Cn%22, res\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-22_01-52-09",
+            "content": "@@ -661,149 +661,24 @@\n tf(%22\n-%5B%22)%0A    for i, p := range resultado %7B%0A        if i %3E 0 %7B%0A            fmt.Printf(%22, %22)%0A        %7D%0A        fmt.Print(p)%0A    %7D%0A    fmt.Printf(%22%5D%22\n+%25v%5Cn%22, resultado\n )%0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-22_01-55-48",
+            "content": "@@ -801,10 +801,8 @@\n f(%22%5D\n-%5Cn\n %22)%0A%7D\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-05-22_01-56-05",
+            "content": "package main\nimport \"fmt\"\n\nfunc eh_primo(num int, divisor int) bool {\n    if num < 2 {\n        return false\n    }\n    if divisor*divisor > num {\n        return true\n    }\n    if num%divisor == 0 {\n        return false\n    }\n    return eh_primo(num, divisor+1)\n}\n\nfunc gprimos(n int, atual int, primos []int) []int {\n    if len(primos) == n {\n        return primos\n    }\n    if eh_primo(atual, 2) {\n        primos = append(primos, atual)\n    }\n    return gprimos(n, atual+1, primos)\n}\n\nfunc main() {\n    var n int\n    _, err := fmt.Scan(&n)\n    if err != nil {\n        fmt.Println(\"[]\")\n        return\n    }\n\n    resultado := gprimos(n, 2, []int{})\n    fmt.Printf(\"[\")\n    for i, p := range resultado {\n        if i > 0 {\n            fmt.Printf(\", \")\n        }\n        fmt.Print(p)\n    }\n    fmt.Printf(\"]\\n\")\n}\n",
+            "lines": "44"
+        }
+    ]
+}

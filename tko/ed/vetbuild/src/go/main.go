@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"strings"
+	"os"
 )
 
 type Vector struct {
@@ -17,6 +18,13 @@ func NewVector(capacity int) *Vector {
 		data:     make([]int, capacity), // nunca use len(data) ou cap(data) ou qq método do go de manipulação de array
 		size:     0,
 		capacity: capacity,
+	}
+}
+
+func (v *Vector) Reserve(newCapacity int) {
+	if newCapacity > v.capacity {
+		newData := make([]int, newCapacity)
+			for i 
 	}
 }
 
@@ -39,12 +47,11 @@ func main() {
 
 	// v := NewVector(0)
 	for {
-		fmt.Print("$")
 		if !scanner.Scan() {
 			break
 		}
 		line = scanner.Text()
-		fmt.Println(line)
+		fmt.Println("$" + line)
 		parts := strings.Fields(line)
 		if len(parts) == 0 {
 			continue
@@ -55,8 +62,8 @@ func main() {
 		case "end":
 			return
 		case "init":
-			// value, _ := strconv.Atoi(parts[1])
-			// v = NewVector(value)
+			value, _ := strconv.Atoi(parts[1])
+			v = NewVector(value)
 		case "push":
 			// for _, part := range parts[1:] {
 			// 	value, _ := strconv.Atoi(part)

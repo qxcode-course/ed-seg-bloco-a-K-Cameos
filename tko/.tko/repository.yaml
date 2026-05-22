@@ -6,35 +6,34 @@ sources:
   type: local
   writeable: true
   quests: null
-  tasks: null
 - name: ed
   target: https://github.com/qxcodeed/arcade.git
   index: README.md
   type: git
   writeable: false
   quests: null
-  tasks: null
 - name: eval1
   target: https://github.com/senapk/eval_26_ed_1
   index: README.md
   type: git
   writeable: false
   quests: null
-  tasks: null
 expanded:
 - ed@map_set
+- ed@basic
+- eval1@eval1
+- ed@backtrack
+- ed@rec
+- ed@bfs
+- ed@vector
 - ed@linear
 - ed@list
-- ed@basic
-- ed@rec
-- eval1@eval1
-- ed@bfs
 flags:
   inbox: all
-  panel: help
+  panel: skills
   show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@eh_primo
-selected_index: 25
+selected: ed@priminhos
+selected_index: 28
