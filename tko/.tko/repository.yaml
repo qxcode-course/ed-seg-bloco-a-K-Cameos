@@ -19,21 +19,21 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@map_set
-- ed@basic
-- eval1@eval1
 - ed@backtrack
-- ed@rec
 - ed@bfs
 - ed@vector
 - ed@linear
+- eval1@eval1
+- ed@map_set
 - ed@list
+- ed@rec
+- ed@basic
 flags:
   inbox: all
-  panel: skills
+  panel: help
   show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@priminhos
-selected_index: 28
+selected: ed@lista_d3
+selected_index: 62

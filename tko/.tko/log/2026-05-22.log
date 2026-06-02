@@ -38,3 +38,17 @@
 2026-05-22 01:56:05, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:100, size:44
 2026-05-22 01:56:06, MOVE, v:1, k:ed@priminhos, mode:BACK
 2026-05-22 01:57:12, SELF, v:1, k:ed@priminhos, self:1, rate:100, study:70
+2026-05-22 13:04:45, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-05-22 13:05:21, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-05-22 13:06:52, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-05-22 13:06:59, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-05-22 13:11:59, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-05-22 13:16:25, EXEC, v:1, k:ed@mdc, mode:FULL, rate:100
+2026-05-22 13:16:27, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-05-22 13:16:50, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-05-22 13:16:22, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-05-22 13:16:25, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-05-22 13:16:59, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-05-22 13:19:27, MOVE, v:1, k:ed@pedra, mode:EDIT
+2026-05-22 13:31:31, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100
+2026-05-22 13:31:32, MOVE, v:1, k:ed@pedra, mode:BACK

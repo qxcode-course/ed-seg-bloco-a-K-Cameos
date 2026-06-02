@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-23_14-42-39",
+            "content": "@@ -1760,19 +1760,20 @@\n %09return \n-tru\n+fals\n e%0A%09%7D%0A%09fo\n@@ -1861,20 +1861,19 @@\n %09return \n-fals\n+tru\n e%0A%7D%0A%0Afun\n@@ -1942,16 +1942,17 @@\n urn 0%0A%09%7D\n+d\n %0A%09for i \n",
+            "lines": "224"
+        },
+        {
+            "label": "2026-05-23_14-43-26",
+            "content": "@@ -1760,20 +1760,19 @@\n %09return \n-fals\n+tru\n e%0A%09%7D%0A%09fo\n@@ -1839,19 +1839,20 @@\n %09return \n-tru\n+fals\n e%0A%09%09%7D%0A%09%7D\n@@ -3740,17 +3740,17 @@\n intf(%22(%25\n-d\n+v\n , %25v)%22, \n",
+            "lines": "224"
+        },
+        {
+            "label": "2026-05-23_14-43-53",
+            "content": "@@ -1840,20 +1840,19 @@\n %09return \n-fals\n+tru\n e%0A%09%09%7D%0A%09%7D\n@@ -3684,17 +3684,16 @@\n (%22%5D%22)%0A%7D%0A\n-c\n %0Afunc (p\n@@ -3740,17 +3740,17 @@\n intf(%22(%25\n-v\n+d\n , %25v)%22, \n",
+            "lines": "224"
+        },
+        {
+            "label": "2026-05-23_14-44-30",
+            "content": "@@ -3685,16 +3685,17 @@\n (%22%5D%22)%0A%7D%0A\n+c\n %0Afunc (p\n",
+            "lines": "224"
+        },
+        {
+            "label": "2026-05-23_14-52-44",
+            "content": "@@ -1861,19 +1861,20 @@\n %09return \n-tru\n+fals\n e%0A%7D%0A%0Afun\n",
+            "lines": "224"
+        },
+        {
+            "label": "2026-05-23_14-53-36",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\" \n\t\"strings\"\n\t\"sort\"\n)\n\ntype Pair struct {\n\tOne int\n\tTwo int\n}\n\nfunc abs(x int) int {\n\tif x < 0 {\n\t\treturn -x\n\t}\n\treturn x\n}\n\nfunc occurr(vet []int) []Pair {\n\tcounts := make(map[int]int)\n\tfor _, v := range vet {\n\t\tcounts[abs(v)]++\n\t}\n\n\tvar keys []int\n\tfor k := range counts{\n\t\tkeys = append(keys, k)\n\t}\n\tsort.Ints(keys)\n\n\tvar res []Pair\n\tfor _, k := range keys {\n\t\tres = append(res, Pair{k, counts[k]})\n\t}\n\treturn res\n}\n\nfunc teams(vet []int) []Pair {\n\tif len(vet) == 0 {\n\t\treturn []Pair{}\n\t}\n\tvar res []Pair\n\tcurrVal := vet[0]\n\tcount := 1\n\n\tfor i := 1; i < len(vet); i++ {\n\t\tif vet[i] == currVal {\n\t\t\tcount++\n\t\t}else {\n\t\t\tres = append(res, Pair{currVal, count})\n\t\t\tcurrVal = vet[i]\n\t\t\tcount = 1\n\t\t}\n\t}\n\tres = append(res, Pair{currVal, count})\n\treturn res\n}\n\nfunc mnext(vet []int) []int {\n\tres := make([]int, len(vet))\n\tfor i, v := range vet {\n\t\tif v > 0 {\n\t\t\tprevIsWoman := i > 0 && vet[i-1] < 0\n\t\t\tnextIsWoman := i < len(vet) - 1 && vet[i+1] < 0\n\t\t\tif prevIsWoman || nextIsWoman {\n\t\t\t\tres[i] = 1\n\t\t\t}\n\t\t}\n\t}\n\treturn res\n}\n\nfunc alone(vet []int) []int {\n\tres := make([]int, len(vet))\n\tfor i, v := range vet {\n\t\tif v > 0 {\n\t\t\tprevIsWoman := i > 0 && vet[i-1] < 0\n\t\t\tnextIsWoman := i < len(vet) - 1 && vet[i+1] < 0\n\t\t\tif !prevIsWoman && !nextIsWoman {\n\t\t\t\tres[i] = 1\n\t\t}\n\t}\n}\nreturn res\n}\n\nfunc couple(vet []int) int {\n\tcounts := make(map[int]int)\n\tfor _, v := range vet {\n\t\tcounts[v]++\n\t}\n\ttotalCouples := 0\n\tfor k, countMen := range counts {\n\t\tif k > 0 {\n\t\t\tcountWoman := counts[-k]\n\t\t\tif countMen < countWoman {\n\t\t\t\ttotalCouples += countMen\n\t\t\t}else {\n\t\t\t\ttotalCouples += countWoman\n\t\t\t}\n\t\t}\n\t}\n\treturn totalCouples\n}\nfunc hasSubseq(vet []int, seq []int, pos int) bool {\n\tif pos+len(seq) > len(vet) {\n\t\treturn false\n\t}\n\tfor i := 0; i < len(seq); i++ {\n\t\tif vet[pos+i] != seq[i] {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\n\nfunc subseq(vet []int, seq []int) int {\n\tif len(seq) == 0 {\n\t\treturn 0\n\t}\n\tfor i := 0; i <= len(vet)-len(seq); i++ {\n\t\tif hasSubseq(vet, seq, i) {\n\t\t\treturn i\n\t\t}\n\t}\n\treturn -1\n}\n\nfunc erase(vet []int, posList []int) []int {\n\ttoRemove := make(map[int]bool)\n\tfor _, p := range posList {\n\t\ttoRemove[p] = true\n\t}\n\tvar res []int\n\tfor i, v := range vet {\n\t\tif !toRemove[i] {\n\t\t\tres = append(res, v)\n\t\t}\n\t}\n\treturn res\n}\n\nfunc clear(vet []int, value int) []int {\n\tvar res []int\n\tfor _, v := range vet {\n\t\tif v != value {\n\t\t\tres = append(res, v)\n\t\t}\n\t}\n\treturn res\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"occurr\":\n\t\t\tprintSlice(occurr(str2vet(args[1])))\n\t\tcase \"teams\":\n\t\t\tprintSlice(teams(str2vet(args[1])))\n\t\tcase \"mnext\":\n\t\t\tprintSlice(mnext(str2vet(args[1])))\n\t\tcase \"alone\":\n\t\t\tprintSlice(alone(str2vet(args[1])))\n\t\tcase \"erase\":\n\t\t\tprintSlice(erase(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"clear\":\n\t\t\tval, _ := strconv.Atoi(args[2])\n\t\t\tprintSlice(clear(str2vet(args[1]), val))\n\t\tcase \"subseq\":\n\t\t\tfmt.Println(subseq(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"couple\":\n\t\t\tfmt.Println(couple(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"Invalid command\")\n\t\t}\n\t}\n}\n\n// Fun\u00e7\u00f5es auxiliares\n\nfunc str2vet(str string) []int {\n\tif str == \"[]\" {\n\t\treturn nil\n\t}\n\tstr = str[1 : len(str)-1]\n\tparts := strings.Split(str, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tnum, _ := strconv.Atoi(strings.TrimSpace(part))\n\t\tvet = append(vet, num)\n\t}\n\treturn vet\n}\n\nfunc printSlice[T any](vet []T) {\n\tfmt.Print(\"[\")\n\tfor i, x := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(x)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc (p Pair) String() string {\n\treturn fmt.Sprintf(\"(%v, %v)\", p.One, p.Two)\n}\n",
+            "lines": "224"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-25_14-02-56",
+            "content": "@@ -316,16 +316,18 @@\n Print(%22%5B\n+  \n %22)%0A%09for \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-25_14-03-03",
+            "content": "@@ -316,17 +316,16 @@\n Print(%22%5B\n- \n %22)%0A%09for \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-25_14-03-10",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var t, r int\n\t\n\tif _, err := fmt.Scan(&t, &r); err != nil {\n\t\treturn\n\t}\n\tif t == 0 {\n\t\tfmt.Println(\"[]\")\n\t\treturn\n\t}\n\n\tarr := make([]int, t)\n\tfor i := 0; i<t; i++ {\n\t\tfmt.Scan(&arr[i])\n\t}\n\n\tr = r % t\n\tsplit := (t-r) % t\n\n\trot := append(arr[split:], arr[:split]...)\n\n\tfmt.Print(\"[ \")\n\tfor _, val := range rot {\n\t\tfmt.Printf(\"%d \", val)\n\t}\n\tfmt.Println(\"]\")\n}\n",
+            "lines": "29"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+2026-05-23 12:23:09, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-05-23 12:28:50, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-23 12:37:43, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-23 12:41:48, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-23 12:57:05, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-05-23 13:01:52, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-23 13:02:32, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-23 13:10:21, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-23 13:14:34, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-23 13:43:54, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-05-23 13:48:42, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-23 13:53:43, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-23 13:57:20, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-23 14:02:52, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-23 14:08:41, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-23 14:20:31, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-05-23 14:31:39, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-23 14:42:39, EXEC, v:1, k:ed@especiais, mode:FULL, size:224, fail:COMP
+2026-05-23 14:43:26, EXEC, v:1, k:ed@especiais, mode:FULL, rate:87, size:224
+2026-05-23 14:43:53, EXEC, v:1, k:ed@especiais, mode:FULL, rate:87, size:224
+2026-05-23 14:44:30, EXEC, v:1, k:ed@especiais, mode:FULL, size:224, fail:COMP
+2026-05-23 14:44:31, EXEC, v:1, k:ed@especiais, mode:FULL, fail:COMP
+2026-05-23 14:44:32, EXEC, v:1, k:ed@especiais, mode:FULL, fail:COMP
+2026-05-23 14:44:33, EXEC, v:1, k:ed@especiais, mode:FULL, fail:COMP
+2026-05-23 14:44:34, EXEC, v:1, k:ed@especiais, mode:FREE
+2026-05-23 14:44:30, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-23 14:43:53, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-23 14:52:40, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-05-23 14:52:44, EXEC, v:1, k:ed@especiais, mode:FULL, rate:87, size:224
+2026-05-23 14:53:37, EXEC, v:1, k:ed@especiais, mode:FULL, rate:100, size:224
+2026-05-23 14:53:46, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-05-23 14:54:16, SELF, v:1, k:ed@especiais, self:1, rate:100, study:140
