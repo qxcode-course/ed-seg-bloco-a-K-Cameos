@@ -187,7 +187,8 @@ func (e *Editor) MainLoop() {
 
 func NewEditor() *Editor {
 	e := &Editor{}
-	// Inicializa a tela
+	// Inicializa a telaf
+	
 	screen, err := tcell.NewScreen()
 	if err != nil {
 		fmt.Printf("erro ao criar a tela: %v", err)

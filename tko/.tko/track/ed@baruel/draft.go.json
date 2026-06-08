@@ -72,7 +72,12 @@
         },
         {
             "label": "2026-03-18_14-04-34",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\nfunc main() {\n    var n, m int\n    fmt.Scan(&n, &m)\n\n    freq := make([] int, n+1)\n    for i := 0; i<m; i++ {\n        var x int\n        fmt.Scan(&x)\n        freq[x]++\n    }\n\n    primeira := true\n\n    for i := 1; i <= n; i++ {\n        if freq[i] > 1 {\n            for j := 0; j < freq[i]-1; j++ {\n                if !primeira {\n                    fmt.Print(\" \")\n                }\n                fmt.Print(i)\n                primeira = false\n            }\n        }\n    }\n    if primeira {\n        fmt.Print(\"N\")\n    }\n    fmt.Println()\n\n    primeira = true\n\n    for i := 1; i<= n; i++ {\n        if freq[i] == 0 {\n            if !primeira {\n                fmt.Print(\" \")\n            }\n            fmt.Print(i)\n            primeira = false\n        }\n    }\n    if primeira {\n        fmt.Print(\"N\")\n    }\n    fmt.Println()\n}",
+            "content": "@@ -847,9 +847,8 @@\n ntln()%0A%7D\n-%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-08_16-22-42",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\nfunc main() {\n    var n, m int\n    fmt.Scan(&n, &m)\n\n    freq := make([] int, n+1)\n    for i := 0; i<m; i++ {\n        var x int\n        fmt.Scan(&x)\n        freq[x]++\n    }\n\n    primeira := true\n\n    for i := 1; i <= n; i++ {\n        if freq[i] > 1 {\n            for j := 0; j < freq[i]-1; j++ {\n                if !primeira {\n                    fmt.Print(\" \")\n                }\n                fmt.Print(i)\n                primeira = false\n            }\n        }\n    }\n    if primeira {\n        fmt.Print(\"N\")\n    }\n    fmt.Println()\n\n    primeira = true\n\n    for i := 1; i<= n; i++ {\n        if freq[i] == 0 {\n            if !primeira {\n                fmt.Print(\" \")\n            }\n            fmt.Print(i)\n            primeira = false\n        }\n    }\n    if primeira {\n        fmt.Print(\"N\")\n    }\n    fmt.Println()\n}\n",
             "lines": "50"
         }
     ]

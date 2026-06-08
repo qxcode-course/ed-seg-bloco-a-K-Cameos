@@ -7,8 +7,28 @@
         },
         {
             "label": "2026-03-16_18-27-36",
-            "content": "package main\nimport (\"fmt\"\n\"math\")\nfunc main() {\n    var a, b, c float64\n    fmt.Scan(&a, &b, &c)\n    p := (a+b+c) / 2\n    area := math.Sqrt(p*(p-a)*(p-b)*(p-c))\n    fmt.Printf(\"%.2f\\n\", area)\n\n}\n",
+            "content": "@@ -116,16 +116,54 @@\n / 2%0A    \n+area := math.Sqrt(p*(p-a)*(p-b)*(p-c))\n %0A    fmt\n",
             "lines": "11"
+        },
+        {
+            "label": "2026-06-08_16-17-58",
+            "content": "@@ -9,42 +9,30 @@\n main\n- %0A\n %0Aimport\n-(%0A   \n  \n+(\n %22fmt%22%0A\n-    \n %22math%22\n-%0A)%0A\n+)\n %0Afun\n@@ -83,24 +83,8 @@\n can(\n-%22%25f%5Cn%25f%5Cn%25f%5Cn%22, \n &a, \n@@ -111,53 +111,17 @@\n b+c)\n-/\n+ / \n 2%0A    \n-area := math.Sqrt(p*(p-a)*(p-b)*(p-c))\n %0A   \n@@ -137,16 +137,18 @@\n tf(%22%25.2f\n+%5Cn\n %22, area)\n@@ -148,10 +148,11 @@\n , area)%0A\n+%0A\n %7D%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-06-08_16-21-20",
+            "content": "@@ -201,18 +201,16 @@\n tf(%22%25.2f\n-%5Cn\n %22, area)\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-06-08_16-21-36",
+            "content": "@@ -90,17 +90,16 @@\n fmt.Scan\n-f\n (%22%25f%5Cn%25f\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-06-08_16-22-08",
+            "content": "package main \n\nimport(\n    \"fmt\"\n    \"math\"\n)\n\nfunc main() {\n    var a, b, c float64\n    fmt.Scanf(\"%f\\n%f\\n%f\\n\", &a, &b, &c)\n    p := (a+b+c)/2\n    area := math.Sqrt(p*(p-a)*(p-b)*(p-c))\n    fmt.Printf(\"%.2f\\n\", area)\n}\n",
+            "lines": "14"
         }
     ]
 }
