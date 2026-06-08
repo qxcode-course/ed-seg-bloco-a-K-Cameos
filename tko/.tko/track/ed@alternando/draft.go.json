@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-08_00-59-46",
+            "content": "@@ -41,767 +41,35 @@\n     \n-var n, e, f int%0A%09if _, err := fmt.Scan(&n, &e, &f); err != nil %7B%0A%09%09return%0A%09%7D%0A%0A%09arr := make(%5B%5Dint, n)%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09arr%5Bi%5D = (i + 1) * f%0A%09%09f = -f%0A%09%7D%0A%0A%09swordIdx := e - 1%0A%0A%09for len(arr) %3E 1 %7B%0A%09%09printState(arr, swordIdx)%0A%0A%09%09v := arr%5BswordIdx%5D%0A%09%09dir := 1%0A%09%09if v %3C 0 %7B%0A%09%09%09dir = -1%0A%09%09%7D%0A%0A%09%09killIdx := (swordIdx + dir + len(arr)) %25 len(arr)%0A%0A%09%09arr = append(arr%5B:killIdx%5D, arr%5BkillIdx+1:%5D...)%0A%0A%09%09if killIdx %3C swordIdx %7B%0A%09%09%09swordIdx--%0A%09%09%7D%0A%09%09swordIdx = (swordIdx + dir + len(arr)) %25 len(arr)%0A%09%7D%0AprintState(arr, swordIdx)%0A%0A%7D%0A%0Afunc printState(arr %5B%5Dint, swordIdx int) %7B%0A%09fmt.Print(%22%5B %22)%0A%09for i, v := range arr %7B%0A%09%09if i == swordIdx %7B%0A%09%09%09if v %3E 0 %7B%0A%09%09%09%09fmt.Printf(%22%25d%3E %22, v)%0A%09%09%09%7Delse %7B%0A%09%09%09%09fmt.Printf(%22%3C%25d %22, v)%0A%09%09%09%7D%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22%25d %22, v)%0A%09%09%7D%0A%09%7D%0A%09fm\n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-08_13-18-04",
+            "content": "@@ -797,12 +797,11 @@\n %7D%0A%09%7D%0A%09fm\n-t\n %0A%7D%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-08_13-35-15",
+            "content": "@@ -802,20 +802,7 @@\n %09fmt\n-.Println(%22%5D%22)\n %0A%7D%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-08_14-12-30",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var n, e, f int\n\tif _, err := fmt.Scan(&n, &e, &f); err != nil {\n\t\treturn\n\t}\n\n\tarr := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tarr[i] = (i + 1) * f\n\t\tf = -f\n\t}\n\n\tswordIdx := e - 1\n\n\tfor len(arr) > 1 {\n\t\tprintState(arr, swordIdx)\n\n\t\tv := arr[swordIdx]\n\t\tdir := 1\n\t\tif v < 0 {\n\t\t\tdir = -1\n\t\t}\n\n\t\tkillIdx := (swordIdx + dir + len(arr)) % len(arr)\n\n\t\tarr = append(arr[:killIdx], arr[killIdx+1:]...)\n\n\t\tif killIdx < swordIdx {\n\t\t\tswordIdx--\n\t\t}\n\t\tswordIdx = (swordIdx + dir + len(arr)) % len(arr)\n\t}\nprintState(arr, swordIdx)\n\n}\n\nfunc printState(arr []int, swordIdx int) {\n\tfmt.Print(\"[ \")\n\tfor i, v := range arr {\n\t\tif i == swordIdx {\n\t\t\tif v > 0 {\n\t\t\t\tfmt.Printf(\"%d> \", v)\n\t\t\t}else {\n\t\t\t\tfmt.Printf(\"<%d \", v)\n\t\t\t}\n\t\t} else {\n\t\t\tfmt.Printf(\"%d \", v)\n\t\t}\n\t}\n\tfmt.Println(\"]\")\n}\n",
+            "lines": "53"
+        }
+    ]
+}

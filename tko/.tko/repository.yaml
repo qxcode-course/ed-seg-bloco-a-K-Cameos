@@ -19,21 +19,21 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@backtrack
 - ed@bfs
-- ed@vector
 - ed@linear
-- eval1@eval1
-- ed@map_set
 - ed@list
 - ed@rec
+- eval1@eval1
 - ed@basic
+- ed@backtrack
+- ed@vector
+- ed@map_set
 flags:
   inbox: all
-  panel: help
+  panel: graph
   show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@lista_d3
-selected_index: 62
+selected: ed@alternando
+selected_index: 16

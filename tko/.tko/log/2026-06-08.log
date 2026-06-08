@@ -1,0 +1,65 @@
+2026-06-08 00:00:23, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-06-08 00:00:53, EXEC, v:1, k:ed@setbuild, mode:FULL, size:156, fail:COMP
+2026-06-08 00:00:56, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-06-08 00:04:21, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-06-08 00:04:23, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:163
+2026-06-08 00:04:39, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-06-08 00:04:23, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-06-08 00:09:15, EXEC, v:1, k:ed@setbuild, mode:FREE, size:163
+2026-06-08 00:09:15, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-06-08 00:09:39, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-06-08 00:19:10, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-06-08 00:22:22, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-06-08 00:26:07, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-06-08 00:36:21, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-06-08 00:42:49, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-06-08 00:55:09, SELF, v:1, k:ed@manipulacao, self:1, rate:100, concept:1
+2026-06-08 00:55:09, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-06-08 00:57:50, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-06-08 00:58:33, SELF, v:1, k:ed@analise, self:1, rate:100
+2026-06-08 00:58:46, MOVE, v:1, k:ed@alternando, mode:DOWN
+2026-06-08 00:58:48, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-06-08 00:58:46, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-06-08 00:58:46, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-06-08 00:59:46, EXEC, v:1, k:ed@alternando, mode:FULL, rate:0, size:5
+2026-06-08 01:00:17, MOVE, v:1, k:ed@alternando, mode:BACK
+2026-06-08 01:00:30, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-06-08 00:59:46, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-06-08 01:04:16, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-06-08 01:29:48, SELF, v:1, k:ed@analise, self:1, rate:100
+2026-06-08 01:29:52, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-06-08 01:29:59, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-06-08 12:34:42, SELF, v:1, k:ed@queimada, self:1, rate:100
+2026-06-08 12:34:52, SELF, v:1, k:ed@queimada, self:1, rate:100, guided:1
+2026-06-08 12:35:06, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-06-08 12:35:10, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-06-08 12:35:13, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-06-08 12:35:28, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-06-08 12:39:59, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0
+2026-06-08 12:39:59, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-06-08 12:44:38, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:66, size:165
+2026-06-08 12:45:32, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:66, size:167
+2026-06-08 12:45:48, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:66, size:167
+2026-06-08 12:46:04, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:100, size:167
+2026-06-08 12:46:11, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-06-08 12:46:24, SELF, v:1, k:ed@setbuild, self:1, rate:100, study:120
+2026-06-08 12:46:33, SELF, v:1, k:ed@vetbuild, self:1, rate:100
+2026-06-08 12:46:42, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-06-08 12:46:03, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-06-08 12:46:04, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-06-08 12:46:58, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-06-08 12:55:44, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-06-08 13:03:21, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-06-08 13:08:05, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-06-08 13:12:29, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-06-08 13:18:04, EXEC, v:1, k:ed@alternando, mode:FULL, size:53, fail:COMP
+2026-06-08 13:18:00, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-06-08 13:35:12, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-06-08 13:35:15, EXEC, v:1, k:ed@alternando, mode:FULL, size:53, fail:COMP
+2026-06-08 13:43:41, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-06-08 13:52:16, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-06-08 13:54:48, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-06-08 14:12:10, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-06-08 14:12:30, EXEC, v:1, k:ed@alternando, mode:FULL, rate:100, size:53
+2026-06-08 14:12:35, MOVE, v:1, k:ed@alternando, mode:BACK
+2026-06-08 14:12:50, SELF, v:1, k:ed@alternando, self:1, rate:100, study:70
