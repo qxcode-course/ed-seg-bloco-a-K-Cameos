@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-09_15-06-18",
+            "content": "@@ -2294,17 +2294,16 @@\n tln(%22dif\n-e\n rentes%22)\n",
+            "lines": "166"
+        },
+        {
+            "label": "2026-06-09_15-06-33",
+            "content": "@@ -2256,17 +2256,16 @@\n ntln(%22ig\n-u\n ais%22)%0A%09%09\n",
+            "lines": "166"
+        },
+        {
+            "label": "2026-06-09_15-21-21",
+            "content": "@@ -2284,37 +2284,41 @@\n %09%09%09fmt.Println(%22\n-iguai\n+diferente\n s%22)%0A%09%09%09%7D%0A%09%09case \n",
+            "lines": "166"
+        },
+        {
+            "label": "2026-06-09_15-21-43",
+            "content": "@@ -2296,17 +2296,13 @@\n ln(%22\n-diferente\n+iguai\n s%22)%0A\n",
+            "lines": "166"
+        },
+        {
+            "label": "2026-06-09_15-21-53",
+            "content": "@@ -638,18 +638,8 @@\n = n%0A\n-%09l.size++%0A\n %7D%0A%0Af\n",
+            "lines": "166"
+        },
+        {
+            "label": "2026-06-09_16-20-16",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tnext  *Node\n\tprev  *Node\n\troot  *Node\n}\n\ntype LList struct {\n\troot *Node\n\tsize int\n}\n\nfunc NewLList() *LList {\n\tlist := &LList{}\n\tlist.root = &Node{root: nil}\n\tlist.root.next = list.root\n\tlist.root.prev = list.root\n\tlist.root.root = list.root // n\u00f3 sentinela aponta pra si mesmo\n\treturn list\n}\n\nfunc (l *LList) PushBack(value int) {\n\tl.insertBefore(l.root, value)\n}\n\nfunc (l *LList) insertBefore(mark *Node, value int) {\n\tn := &Node{\n\t\tValue: value,\n\t\troot:  l.root,\n\t}\n\tn.prev = mark.prev\n\tn.next = mark\n\tmark.prev.next = n\n\tmark.prev = n\n\tl.size++\n}\n\nfunc (l *LList) String() string {\n\tvalues := []string{}\n\tfor n := l.root.next; n != l.root; n = n.next {\n\t\tvalues = append(values, strconv.Itoa(n.Value))\n\t}\n\treturn \"[\" + strings.Join(values, \", \") + \"]\"\n}\n\nfunc  equals(lla, llb *LList) bool {\n\tif lla.size != llb.size {\n\t\treturn false\n\t}\n\tna := lla.root.next\n\tnb := llb.root.next\n\tfor na != lla.root && nb != llb.root {\n\t\tif na.Value != nb.Value {\n\t\t\treturn false\n\t\t}\n\t\tna = na.next\n\t\tnb = nb.next\n\t}\n\treturn true\n}\n\nfunc addsorted(l *LList, value int) {\n\tn := l.root.next\n\tfor n != l.root && n.Value < value {\n\t\tn = n.next\n\t}\n\tl.insertBefore(n, value)\n}\n\nfunc reverse(l *LList) {\n\tcurr := l.root\n\tfor {\n\t\tcurr.next, curr.prev = curr.prev, curr.next\n\t\tcurr = curr.prev\n\t\tif curr == l.root {\n\t\t\tbreak\n\t\t}\n\t}\n}\n\nfunc merge(lla, llb *LList) *LList {\n\tna := lla.root.next\n\tnb := llb.root.next\n\n\tfor nb != llb.root {\n\t\tfor na != lla.root && na.Value <= nb.Value {\n\t\t\tna = na.next\n\t\t}\n\t\tlla.insertBefore(na, nb.Value)\n\t\tnb = nb.next\n\t}\nreturn lla\n\n}\n \nfunc str2list(serial string) *LList {\n\tserial = serial[1 : len(serial)-1]\n\tll := NewLList()\n\tif serial == \"\" {\n\t\treturn ll\n\t}\n\tfor _, p := range strings.Split(serial, \",\") {\n\t\tvalue, _ := strconv.Atoi(p)\n\t\tll.PushBack(value)\n\t}\n\treturn ll\n}\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\tfmt.Println(line)\n\t\targs := strings.Fields(line)\n\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tcmd := args[0]\n\n\t\tswitch cmd {\n\t\tcase \"compare\":\n\t\t\tlla := str2list(args[1])\n\t\t\tllb := str2list(args[2])\n\t\t\tif equals(lla, llb) {\n\t\t\t\tfmt.Println(\"iguais\")\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"diferentes\")\n\t\t\t}\n\t\tcase \"addsorted\":\n\t\t\tlla := NewLList()\n\t\t\tfor i := 1; i < len(args); i++ {\n\t\t\tvalue, _ := strconv.Atoi(args[i])\n\t\t\taddsorted(lla, value)\n\t\t\t}\n\t\t\tfmt.Println(lla)\n\t\tcase \"reverse\":\n\t\t\tlla := str2list(args[1])\n\t\t\treverse(lla)\n\t\t\tfmt.Println(lla)\n\t\tcase \"merge\":\n\t\t\tlla := str2list(args[1])\n\t\t\tllb := str2list(args[2])\n\t\t\tmerged := merge(lla, llb)\n\t\t\tfmt.Println(merged)\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "167"
+        }
+    ]
+}
