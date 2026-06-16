@@ -19,16 +19,16 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@dfs
+- ed@tree
+- ed@map_set
 - ed@list
 - ed@basic
-- ed@backtrack
-- ed@linear
-- ed@rec
-- ed@map_set
+- ed@dfs
 - ed@bfs
+- ed@linear
+- ed@backtrack
+- ed@rec
 - ed@vector
-- ed@tree
 flags:
   inbox: all
   panel: graph
@@ -36,5 +36,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@recursao
-selected_index: 18
+selected: ed@inverter
+selected_index: 32

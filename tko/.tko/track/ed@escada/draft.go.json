@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-14_21-58-38",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -50,17 +50,20 @@\n ) int %7B%0A\n-%09\n+    \n if n == \n@@ -66,31 +66,43 @@\n  == 1 %7B%0A\n-%09%09\n+        \n ret\n-u\n r\n+u\n n 1%0A\n-%09%7D%0A%09\n+    %7D%0A    \n if n == \n@@ -105,18 +105,24 @@\n  == 2 %7B%0A\n-%09%09\n+        \n return 1\n@@ -122,20 +122,26 @@\n eturn 1%0A\n-%09%7D%0A%09\n+    %7D%0A    \n if n == \n@@ -144,18 +144,24 @@\n  == 3 %7B%0A\n-%09%09\n+        \n return 2\n@@ -165,13 +165,19 @@\n n 2%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n dp :\n@@ -192,16 +192,21 @@\n %5Dint\n+ \n , n\n+ \n +1)%0A\n-%09\n+    \n dp%5B1\n@@ -211,17 +211,20 @@\n %5B1%5D = 1%0A\n-%09\n+    \n dp%5B2%5D = \n@@ -225,17 +225,20 @@\n %5B2%5D = 1%0A\n-%09\n+    \n dp%5B3%5D = \n@@ -240,17 +240,20 @@\n 3%5D = 2%0A%0A\n-%09\n+    \n for i :=\n@@ -267,21 +267,26 @@\n = n; i++\n- \n %7B%0A\n-%09%09\n+        \n dp%5Bi%5D = \n@@ -303,20 +303,20 @@\n dp%5Bi-3%5D%0A\n-%09%7D%0A%09\n+    \n return d\n@@ -337,17 +337,20 @@\n ain() %7B%0A\n-%09\n+    \n var n in\n@@ -354,11 +354,18 @@\n  int\n-%0A%0A%09\n+chan%0A%0A    \n if _\n@@ -404,47 +404,29 @@\n l %7B%0A\n-%09%09return%0A%09%7D%0A%09fmt.Println(waysToClimb(n))\n+        return m%0A    %7D\n %0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-06-14_22-06-34",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc waysToClimb(n int) int {\n\tif n == 1 {\n\t\treturn 1\n\t}\n\tif n == 2 {\n\t\treturn 1\n\t}\n\tif n == 3 {\n\t\treturn 2\n\t}\n\n\tdp := make([]int, n+1)\n\tdp[1] = 1\n\tdp[2] = 1\n\tdp[3] = 2\n\n\tfor i := 4; i <= n; i++ {\n\t\tdp[i] = dp[i-1] + dp[i-3]\n\t}\n\treturn dp[n]\n}\n\nfunc main() {\n\tvar n int\n\n\tif _, err := fmt.Scan(&n); err != nil {\n\t\treturn\n\t}\n\tfmt.Println(waysToClimb(n))\n}\n",
+            "lines": "34"
+        }
+    ]
+}

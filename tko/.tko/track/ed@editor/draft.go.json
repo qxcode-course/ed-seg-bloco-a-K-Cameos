@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-15_21-00-11",
+            "content": "@@ -10,890 +10,66 @@\n ain%0A\n-%0A\n import \n-(%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A)%0A%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%0A%09for scanner.Scan() %7B%0A%09%09line := scanner.Text()%0A%09%09if len(line) == 0 %7B%0A%09%09%09continue%0A%09%09%7D%0A%0A%09%09var left %5B%5Drune%0A%09%09var right %5B%5Drune%0A%0A%09%09for _, cmd := range line %7B%0A%09%09%09switch cmd %7B%0A%09%09%09case 'R':%0A%09%09%09%09left = append(left, '%5Cn')%0A%09%09%09case 'B':%0A%09%09%09%09if len(left) %3E 0 %7B%0A%09%09%09%09%09left = left%5B:len(left)-1%5D%0A%09%09%09%09%7D%0A%09%09%09case 'D':%0A%09%09%09%09if len(right) %3E 0 %7B%0A%09%09%09%09%09right = right%5B:len(right)-1%5D%0A%09%09%09%09%7D%0A%09%09%09case '%3C':%0A%09%09%09%09if len(left) %3E 0 %7B%0A%09%09%09%09%09right = append(right, left%5Blen(left)-1%5D)%0A%09%09%09%09%09left = left%5B:len(left)-1%5D%0A%09%09%09%09%7D%0A%09%09%09case '%3E':%0A%09%09%09%09if len(right) %3E 0 %7B%0A%09%09%09%09%09left = append(left, right%5Blen(right)-1%5D)%0A%09%09%09%09%09right = right%5B:len(right)-1%5D%0A%09%09%09%09%7D%0A%09%09%09default:%0A%09%09%09%09left = append(left, cmd)%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%09fmt.Print(string(left))%0A%0A%09%09fmt.Print(%22%7C%22)%0A%0A%09%09for i := len(right) - 1; i %3E= 0; i-- %7B%0A%09%09%09fmt.Print(string(right%5Bi%5D))%0A%09%09%7D%0A%09%09fmt.Println()%0A%09%7D\n+%22fmt%22%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-15_21-00-32",
+            "content": "@@ -871,13 +871,29 @@\n %5D))%0A%09%09%7D%0A\n+%09%09fmt.Println()%0A\n %09%7D%0A%7D%0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-06-15_21-01-13",
+            "content": "@@ -875,24 +875,8 @@\n %09%09%7D%0A\n-%09%09fmt.Println()%0A\n %09%7D%0A%7D\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-15_21-05-11",
+            "content": "@@ -45,29 +45,8 @@\n %0A)%0A%0A\n-// cursor interativo%0A\n func\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-06-15_21-19-13",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// cursor interativo\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor scanner.Scan() {\n\t\tline := scanner.Text()\n\t\tif len(line) == 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tvar left []rune\n\t\tvar right []rune\n\n\t\tfor _, cmd := range line {\n\t\t\tswitch cmd {\n\t\t\tcase 'R':\n\t\t\t\tleft = append(left, '\\n')\n\t\t\tcase 'B':\n\t\t\t\tif len(left) > 0 {\n\t\t\t\t\tleft = left[:len(left)-1]\n\t\t\t\t}\n\t\t\tcase 'D':\n\t\t\t\tif len(right) > 0 {\n\t\t\t\t\tright = right[:len(right)-1]\n\t\t\t\t}\n\t\t\tcase '<':\n\t\t\t\tif len(left) > 0 {\n\t\t\t\t\tright = append(right, left[len(left)-1])\n\t\t\t\t\tleft = left[:len(left)-1]\n\t\t\t\t}\n\t\t\tcase '>':\n\t\t\t\tif len(right) > 0 {\n\t\t\t\t\tleft = append(left, right[len(right)-1])\n\t\t\t\t\tright = right[:len(right)-1]\n\t\t\t\t}\n\t\t\tdefault:\n\t\t\t\tleft = append(left, cmd)\n\t\t\t}\n\t\t}\n\n\t\tfmt.Print(string(left))\n\n\t\tfmt.Print(\"|\")\n\n\t\tfor i := len(right) - 1; i >= 0; i-- {\n\t\t\tfmt.Print(string(right[i]))\n\t\t}\n\t\tfmt.Println()\n\t}\n}\n",
+            "lines": "58"
+        }
+    ]
+}
