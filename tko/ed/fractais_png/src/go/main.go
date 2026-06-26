@@ -4,47 +4,61 @@ import (
 	"fmt"
 )
 
-func drawTree(pen *Pen, lenght, angle, ratio float64, depth int) {
+func drawGelo(pen *Pen, length float64, depth int, isRoot bool) {
 	if depth == 0 {
 		return
 	}
 
-	pen.Walk(lenght)
+	reducao := 0.35
 
-	pen.Left(angle)
-	drawTree(pen, lenght*ratio, angle, ratio, depth-1)
+	if isRoot {
+		for i := 0; i < 5; i++ {
+			pen.Down()
+			pen.Walk(length)
 
-	pen.Right(angle * 2)
-	drawTree(pen, lenght*ratio, angle, ratio, depth-1)
+			drawGelo(pen, length*reducao, depth-1, false)
 
-	pen.Left(angle)
+			pen.Up()
+			pen.Walk(-length)
+			pen.Left(72)
+		}
+	} else {
+		pen.Left(108)
 
-	pen.Up()
-	pen.Walk(-lenght)
-	pen.Down()
+		for i := 0; i < 4; i++ {
+			pen.Down()
+			pen.Walk(length)
+
+			drawGelo(pen, length*reducao, depth-1, false)
+
+			pen.Up()
+			pen.Walk(-length)
+			pen.Right(72)
+		}
+
+		pen.Left(108)
+	}
 }
+
 func main() {
-	pen := NewPen(800, 600)
+	pen := NewPen(800, 800)
 
 	pen.SetRGB(0, 0, 0)
 	pen.dc.Clear()
 
 	pen.SetRGB(255, 255, 255)
-
 	pen.SetLineWidth(1)
 
 	pen.Up()
-	pen.SetPosition(400, 800)
-	pen.SetHeading(90)
+	pen.SetPosition(400, 400)
+	pen.SetHeading(270)
 	pen.Down()
 
-	tamanhoTronco := 220.0
-	angulo := 32.0
-	reducao := 0.75
-	profundidade := 12
+	raioInicial := 230.0
+	profundidade := 5
 
-	drawTree(pen, tamanhoTronco, angulo, reducao, profundidade)
+	drawGelo(pen, raioInicial, profundidade, true)
 
-	pen.SavePNG("arvore.png")
-	fmt.Println("PNG criado: arvore.png")
+	pen.SavePNG("gelo.png")
+	fmt.Println("png criado: gelo.png")
 }

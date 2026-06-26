@@ -19,22 +19,24 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@tree
-- ed@map_set
-- ed@list
-- ed@basic
-- ed@dfs
+- ed@backtrack
 - ed@bfs
 - ed@linear
-- ed@backtrack
-- ed@rec
+- ed@map_set
+- ed@tree
+- ed@dfs
 - ed@vector
+- ed@basic
+- ed@rec
+- ed@list
 flags:
   inbox: all
-  panel: graph
-  show_panel: 'false'
+  panel: skills
   task_graph_mode: executions
   show_time: 'true'
+audit:
+  enabled: false
+  interval_seconds: null
 lang: go
-selected: ed@inverter
-selected_index: 32
+selected: ed@fractais_png
+selected_index: 25
