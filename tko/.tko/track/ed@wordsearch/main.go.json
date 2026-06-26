@@ -12,8 +12,28 @@
         },
         {
             "label": "2026-05-18_19-29-00",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o mude a assinatura desta fun\u00e7\u00e3o, ela \u00e9 a fun\u00e7\u00e3o chamada pelo LeetCode\nfunc exist(board [][]byte, word string) bool {\n\tm := len(board)\n\tif m == 0 {\n\t\treturn false\n\t}\n\tn := len(board[0])\n\n\tif len(word) > m*n {\n\t\treturn false\n\t}\n\n\tboardFreq := make(map[byte]int)\n\tfor i := 0; i < m; i++ {\n\t\tfor j := 0; j < n; j++ {\n\t\t\tboardFreq[board[i][j]]++\n\t\t}\n\t}\n\twordFreq := make(map[byte]int)\n\tfor i := 0; i < len(word); i++{\n\t\twordFreq[word[i]]++\n\t\tif wordFreq[word[i]] > boardFreq[word[i]] {\n\t\t\treturn false\n\t\t}\n\t}\n\t\n\tif boardFreq[word[0]] > boardFreq[word[len(word)-1]] {\n\t\treversed := []byte(word)\n\t\tfor i, j := 0, len(reversed)-1; i < j; i, j = 1+1, j-1 {\n\t\t\treversed[i], reversed[j] = reversed[j], reversed[i]\n\t\t}\n\t\tword = string(reversed)\n\t}\n\tvar dfs func(r, c, index int) bool\n\tdfs = func(r, c, index int) bool {\n\t\tif index == len(word) {\n\t\t\treturn true\n\t\t}\n\n\t\tif r < 0 || r >= m || c < 0 || c >= n || board[r][c] != word[index] {\n\t\t\treturn false\n\t\t}\n\n\t\ttemp := board[r][c]\n\t\tboard[r][c] = '#'\n\n\t\tfound := dfs(r+1, c, index+1) ||\n\t\tdfs(r-1, c, index+1) ||\n\t\tdfs(r, c+1, index+1) ||\n\t\tdfs(r, c, index+1)\n\n\t\tboard[r][c] = temp\n\n\t\treturn found\n\t}\n\n\tfor i := 0; i < m; i++ {\n\t\tfor j := 0; j < n; j++ {\n\t\t\tif board[i][j] == word[0] {\n\t\t\t\tif dfs(i, j, 0) {\n\t\t\t\t\treturn true\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\treturn false\n\n}\n\n\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar word string\n\tfmt.Sscanf(scanner.Text(), \"%s\", &word)\n\tgrid := make([][]byte, 0)\n\tfor scanner.Scan() {\n\t\tgrid = append(grid, []byte(scanner.Text()))\n\t}\n\tif exist(grid, word) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "content": "@@ -1476,17 +1476,16 @@\n  &word)%0A\n-%0A\n %09grid :=\n@@ -1529,55 +1529,8 @@\n ) %7B%0A\n-%09%09text := scanner.Text()%0A%09%09if len(text) %3E 0 %7B%0A%09\n %09%09gr\n@@ -1558,23 +1558,28 @@\n yte(\n-t\n+scanner.T\n ext\n+(\n ))\n-%0A%09%09%7D\n+)\n %0A%09%7D%0A\n-%0A\n %09if \n",
             "lines": "95"
+        },
+        {
+            "label": "2026-06-26_12-06-35",
+            "content": "@@ -684,17 +684,17 @@\n  i, j = \n-i\n+1\n +1, j-1 \n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-06-26_12-10-25",
+            "content": "@@ -1068,26 +1068,24 @@\n index+1) %7C%7C%0A\n-%09%09\n %09%09dfs(r-1, c\n@@ -1092,34 +1092,32 @@\n , index+1) %7C%7C%0A%09%09\n-%09\n-%09\n dfs(r, c+1, inde\n@@ -1124,18 +1124,16 @@\n x+1) %7C%7C%0A\n-%09%09\n %09%09dfs(r,\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-06-26_12-22-24",
+            "content": "@@ -1140,18 +1140,16 @@\n dfs(r, c\n--1\n , index+\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-06-26_12-28-47",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o mude a assinatura desta fun\u00e7\u00e3o, ela \u00e9 a fun\u00e7\u00e3o chamada pelo LeetCode\nfunc exist(board [][]byte, word string) bool {\n\tm := len(board)\n\tif m == 0 {\n\t\treturn false\n\t}\n\tn := len(board[0])\n\n\tif len(word) > m*n {\n\t\treturn false\n\t}\n\n\tboardFreq := make(map[byte]int)\n\tfor i := 0; i < m; i++ {\n\t\tfor j := 0; j < n; j++ {\n\t\t\tboardFreq[board[i][j]]++\n\t\t}\n\t}\n\twordFreq := make(map[byte]int)\n\tfor i := 0; i < len(word); i++{\n\t\twordFreq[word[i]]++\n\t\tif wordFreq[word[i]] > boardFreq[word[i]] {\n\t\t\treturn false\n\t\t}\n\t}\n\t\n\tif boardFreq[word[0]] > boardFreq[word[len(word)-1]] {\n\t\treversed := []byte(word)\n\t\tfor i, j := 0, len(reversed)-1; i < j; i, j = i+1, j-1 {\n\t\t\treversed[i], reversed[j] = reversed[j], reversed[i]\n\t\t}\n\t\tword = string(reversed)\n\t}\n\tvar dfs func(r, c, index int) bool\n\tdfs = func(r, c, index int) bool {\n\t\tif index == len(word) {\n\t\t\treturn true\n\t\t}\n\n\t\tif r < 0 || r >= m || c < 0 || c >= n || board[r][c] != word[index] {\n\t\t\treturn false\n\t\t}\n\n\t\ttemp := board[r][c]\n\t\tboard[r][c] = '#'\n\n\t\tfound := dfs(r+1, c, index+1) ||\n\t\t\t\tdfs(r-1, c, index+1) ||\n\t\t\t\tdfs(r, c+1, index+1) ||\n\t\t\t\tdfs(r, c-1, index+1)\n\n\t\tboard[r][c] = temp\n\n\t\treturn found\n\t}\n\n\tfor i := 0; i < m; i++ {\n\t\tfor j := 0; j < n; j++ {\n\t\t\tif board[i][j] == word[0] {\n\t\t\t\tif dfs(i, j, 0) {\n\t\t\t\t\treturn true\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\treturn false\n\n}\n\n\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar word string\n\tfmt.Sscanf(scanner.Text(), \"%s\", &word)\n\n\tgrid := make([][]byte, 0)\n\tfor scanner.Scan() {\n\t\ttext := scanner.Text()\n\t\tif len(text) > 0 {\n\t\t\tgrid = append(grid, []byte(text))\n\t\t}\n\t}\n\n\tif exist(grid, word) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "100"
         }
     ]
 }

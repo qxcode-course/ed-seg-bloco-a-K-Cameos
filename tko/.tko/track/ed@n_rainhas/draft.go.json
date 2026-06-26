@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-26_12-29-58",
+            "content": "@@ -23,569 +23,53 @@\n mt%22%0A\n-%0A\n func \n-solve(row, cols, diag1, diag2, n int) int %7B%0A    if row == n %7B%0A        return 1%0A    %7D%0A%0A    count := 0%0A%0A    disp := ((1 %3C%3C n) - 1) &%5E (cols %7C diag1 %5C diag2)%0A%0A    for disp != 0 %7B%0A        pos := disp & -disp%0A%0A        disp &= disp - 1%0A%0A        count += solve(%0A            row+1,%0A            cols%7Cpos,%0A            (diag1%7Cpos)%3E%3E1,%0A            (diag2%7Cpos)%3C%3C1,%0A            n,%0A        )%0A    %7D%0A%0A    return count%0A%7D%0A%0Afunc main() %7B%0A    var n int%0A%0A    if _, err := fmt.Scan(&n); err != nil %7B%0A        return%0A    %7D%0A%0A    total := solve(0, 0, 0, 0, n)%0A%0A    fmt.Println(total\n+main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-26_16-01-54",
+            "content": "@@ -171,17 +171,17 @@\n %7C diag1 \n-%7C\n+%5C\n  diag2)%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-26_16-02-10",
+            "content": "@@ -344,18 +344,18 @@\n ag1%7Cpos)\n-%3C%3C\n+%3E%3E\n 1,%0A     \n@@ -368,26 +368,26 @@\n  (diag2%7Cpos)\n-%3E%3E\n+%3C%3C\n 1,%0A         \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-26_16-02-36",
+            "content": "package main\nimport \"fmt\"\n\nfunc solve(row, cols, diag1, diag2, n int) int {\n    if row == n {\n        return 1\n    }\n\n    count := 0\n\n    disp := ((1 << n) - 1) &^ (cols | diag1 | diag2)\n\n    for disp != 0 {\n        pos := disp & -disp\n\n        disp &= disp - 1\n\n        count += solve(\n            row+1,\n            cols|pos,\n            (diag1|pos)<<1,\n            (diag2|pos)>>1,\n            n,\n        )\n    }\n\n    return count\n}\n\nfunc main() {\n    var n int\n\n    if _, err := fmt.Scan(&n); err != nil {\n        return\n    }\n\n    total := solve(0, 0, 0, 0, n)\n\n    fmt.Println(total)\n}\n",
+            "lines": "40"
+        }
+    ]
+}

@@ -34,7 +34,7 @@ func exist(board [][]byte, word string) bool {
 	
 	if boardFreq[word[0]] > boardFreq[word[len(word)-1]] {
 		reversed := []byte(word)
-		for i, j := 0, len(reversed)-1; i < j; i, j = 1+1, j-1 {
+		for i, j := 0, len(reversed)-1; i < j; i, j = i+1, j-1 {
 			reversed[i], reversed[j] = reversed[j], reversed[i]
 		}
 		word = string(reversed)
@@ -53,9 +53,9 @@ func exist(board [][]byte, word string) bool {
 		board[r][c] = '#'
 
 		found := dfs(r+1, c, index+1) ||
-		dfs(r-1, c, index+1) ||
-		dfs(r, c+1, index+1) ||
-		dfs(r, c, index+1)
+				dfs(r-1, c, index+1) ||
+				dfs(r, c+1, index+1) ||
+				dfs(r, c-1, index+1)
 
 		board[r][c] = temp
 

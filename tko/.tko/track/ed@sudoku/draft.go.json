@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-26_15-12-09",
+            "content": "@@ -469,17 +469,16 @@\n %3C subSiz\n-e\n ; i++ %7B%0A\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-06-26_15-12-24",
+            "content": "@@ -827,84 +827,8 @@\n ' %7B%0A\n-        return solve(board, index+1, n)%0A    %7D%0A%0A    for i := 1; i%3C= n; i++ %7B%0A\n     \n@@ -848,14 +848,17 @@\n te(i\n-+\n+ + \n '0')%0A\n+%0A\n     \n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-06-26_15-15-20",
+            "content": "@@ -1387,42 +1387,8 @@\n tr)%0A\n-        board%5Bi%5D = %5B%5Dbyte(rowStr)%0A\n     \n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-06-26_15-17-19",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"math\"\n)\n\nfunc isValid(board [][]byte, row, col int, num byte, n int) bool {\n    for i := 0; i < n; i++ {\n        if board[row][i] == num {\n            return false\n        }\n    }\n\n    for i := 0; i < n; i++ {\n        if board[i][col] == num {\n            return false\n        }\n    }\n\n    subSize := int(math.Sqrt(float64(n)))\n    startRow := (row / subSize) * subSize\n    startCol := (col / subSize) * subSize\n\n    for i := 0; i < subSize; i++ {\n        for j := 0; j < subSize; j++ {\n            if board[startRow+i][startCol+j] == num {\n                return false\n            }\n        }\n    }\n    return true\n}\n\nfunc solve(board [][]byte, index, n int) bool {\n    if index == n*n {\n        return true\n    }\n\n    row := index / n \n    col := index % n \n\n    if board[row][col] != '.' {\n        return solve(board, index+1, n)\n    }\n\n    for i := 1; i<= n; i++ {\n        num := byte(i+'0')\n        if isValid(board, row, col, num, n) {\n            board[row][col] = num\n            \n            if solve(board, index+1, n) {\n                return true\n            }\n\n            board[row][col] = '.'\n        }\n    }\n\n    return false\n}\n\n\nfunc main() {\n    var n int\n\n    if _, err := fmt.Scan(&n); err != nil {\n        return\n    }\n\n    board := make([][]byte, n)\n    for i := 0; i < n; i++ {\n        var rowStr string\n        fmt.Scan(&rowStr)\n        board[i] = []byte(rowStr)\n    }\n\n    solve(board, 0, n)\n\n    for i := 0; i < n; i++ {\n        fmt.Println(string(board[i]))\n    }\n}\n",
+            "lines": "82"
+        }
+    ]
+}

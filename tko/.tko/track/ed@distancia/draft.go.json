@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-26_11-55-32",
+            "content": "@@ -105,17 +105,16 @@\n ); err !\n-=\n  nil %7B%0A \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-26_11-55-55",
+            "content": "@@ -737,27 +737,26 @@\n             \n-tam\n+ja\n p%5Bi%5D = njap%5B\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-26_11-57-51",
+            "content": "@@ -672,17 +672,17 @@\n        i\n-f\n+d\n  tamp%5Bi%5D\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-26_11-58-01",
+            "content": "@@ -894,18 +894,16 @@\n   res%5Bi%5D\n- =\n  tamp%5Bi%25\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-26_11-58-22",
+            "content": "@@ -197,17 +197,17 @@\n := 0; i \n-%3E\n+%3C\n  T; i++ \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-26_12-02-27",
+            "content": "@@ -189,33 +189,33 @@\n   for i := 0; i \n-%3C\n+%3E\n  T; i++ %7B%0A      \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-26_12-03-17",
+            "content": "@@ -417,17 +417,17 @@\n  digito \n-%3C\n+%3E\n = L %7B%0A  \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-26_12-04-07",
+            "content": "@@ -528,17 +528,16 @@\n = 0; d %3C\n-=\n  L; d++ \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-26_12-04-33",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var s string\n    var L int\n\n    if _, err := fmt.Scan(&s, &L); err != nil {\n        return\n    }\n\n    T := L + 1\n\n    tamp := make([]byte, T)\n    for i := 0; i < T; i++ {\n        tamp[i] = '.'\n    }\n\n    jap := make([]bool, L+1)\n\n    for i := 0; i < len(s); i++ {\n        if s[i] != '.' {\n            tamp[i%T] = s[i]\n\n            digito := int (s[i] - '0')\n            if digito <= L {\n                jap[digito] = true\n            }\n        }\n    }\n    var njap []byte\n    for d := 0; d <= L; d++ {\n        if !jap[d] {\n            njap = append(njap, byte(d+'0'))\n        }\n    }\n    uIdx := 0\n    for i := 0; i < T; i++ {\n        if tamp[i] == '.' {\n            if uIdx < len(njap) {\n                tamp[i] = njap[uIdx]\n                uIdx++\n            }\n        }\n    }\n    res := make([]byte, len(s))\n    for i := 0; i< len(s); i++ {\n        res[i] = tamp[i%T]\n    }\n\n    fmt.Println(string(res))\n}\n",
+            "lines": "51"
+        }
+    ]
+}

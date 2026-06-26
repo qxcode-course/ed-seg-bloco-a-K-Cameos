@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-26_11-17-33",
+            "content": "@@ -50,14 +50,8 @@\n nt, \n-n int,\n targ\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-06-26_11-18-02",
+            "content": "@@ -52,17 +52,16 @@\n , n int,\n- \n target i\n@@ -208,37 +208,38 @@\n rn subsetSum(arr\n-, \n+%5B:\n n-1\n+%5D\n , target)%0A    %7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-06-26_11-18-54",
+            "content": "@@ -182,9 +182,9 @@\n -1%5D \n-%3E\n+%3C\n  tar\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-06-26_11-22-49",
+            "content": "@@ -30,26 +30,24 @@\n nc subsetSum\n-DP\n (arr %5B%5Dint, \n@@ -45,16 +45,23 @@\n r %5B%5Dint,\n+ n int,\n  target \n@@ -80,182 +80,120 @@\n     \n-dp := make(%5B%5Dbool, target+1)%0A    dp%5B0%5D = true%0A%0A    for  _, num := range arr %7B\n+if target == 0 %7B%0A        return true\n %0A    \n+%7D%0A\n     \n-for j := target; j %3E= num; j-- %7B%0A            if dp%5Bj-num%5D %7B\n+if n == 0 %7B%0A        return false\n %0A    \n+%7D%0A\n     \n-        dp%5Bj%5D = true\n+if arr%5Bn-1%5D %3E target %7B\n %0A   \n@@ -201,52 +201,128 @@\n     \n-    %7D%0A        %7D%0A    %7D%0A%0A    return dp%5Btarget%5D\n+return subsetSum(arr, n-1, target)%0A    %7D%0A%0A    return subsetSum(arr, n-1, target) %7C%7C subsetSum(arr, n-1, target-arr%5Bn-1%5D)\n %0A%0A%7D%0A\n@@ -520,39 +520,108 @@\n     \n-fmt.Println(subsetSumDP(arr, k))\n+if subsetSum(arr, n, k) %7B%0A        fmt.Println(%22true%22)%0A    %7D else %7B%0A        fmt.Println(%22false%22)%0A    %7D\n %0A%7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-06-26_16-11-59",
+            "content": "package main\nimport \"fmt\"\n\nfunc subsetSumDP(arr []int, target int) bool {\n    dp := make([]bool, target+1)\n    dp[0] = true\n\n    for  _, num := range arr {\n        for j := target; j >= num; j-- {\n            if dp[j-num] {\n                dp[j] = true\n            }\n        }\n    }\n\n    return dp[target]\n\n}\n\nfunc main() {\n    var n, k int\n\n    if _, err := fmt.Scan(&n, &k); err != nil {\n        return\n    }\n    arr := make([]int, n)\n\n    for i := 0; i < n; i++ {\n        fmt.Scan(&arr[i])\n    }\n\n    fmt.Println(subsetSumDP(arr, k))\n}\n",
+            "lines": "33"
+        }
+    ]
+}
