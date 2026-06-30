@@ -19,13 +19,7 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@map_set
-- ed@bfs
-- ed@rec
-- ed@basic
-- ed@dfs
-- ed@vector
-- ed@backtrack
+- ed@linear
 flags:
   inbox: all
   panel: skills
@@ -35,5 +29,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@distancia
-selected_index: 53
+selected: ed@pilhado
+selected_index: 11

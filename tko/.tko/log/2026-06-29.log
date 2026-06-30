@@ -1,0 +1,37 @@
+2026-06-29 21:12:01, MOVE, v:1, k:ed@fila_enc, mode:PICK
+2026-06-29 21:12:01, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-06-29 21:14:15, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-06-29 21:20:18, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-06-29 21:23:32, EXEC, v:1, k:ed@fila_enc, mode:FULL, size:133, fail:COMP
+2026-06-29 21:24:45, EXEC, v:1, k:ed@fila_enc, mode:FULL, size:134, fail:COMP
+2026-06-29 21:25:49, EXEC, v:1, k:ed@fila_enc, mode:FULL, size:134, fail:COMP
+2026-06-29 21:26:23, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:100, size:134
+2026-06-29 21:26:26, MOVE, v:1, k:ed@fila_enc, mode:BACK
+2026-06-29 21:26:52, SELF, v:1, k:ed@fila_enc, self:1, rate:100, study:60
+2026-06-29 21:27:39, MOVE, v:1, k:ed@pilha, mode:DOWN
+2026-06-29 21:27:40, MOVE, v:1, k:ed@pilha, mode:PICK
+2026-06-29 21:27:39, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-29 21:30:46, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-29 21:36:31, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-29 21:41:09, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-29 21:46:32, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-29 21:51:14, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-29 21:55:53, EXEC, v:1, k:ed@pilha, mode:FULL, size:118, fail:COMP
+2026-06-29 21:56:20, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-29 21:58:42, EXEC, v:1, k:ed@pilha, mode:FULL, rate:33, size:121
+2026-06-29 21:59:29, EXEC, v:1, k:ed@pilha, mode:FULL, rate:66, size:121
+2026-06-29 22:01:32, EXEC, v:1, k:ed@pilha, mode:FULL, rate:66, size:121
+2026-06-29 22:01:29, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-29 22:01:31, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-06-29 22:01:44, EXEC, v:1, k:ed@pilha, mode:FULL, rate:100, size:121
+2026-06-29 22:02:19, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-06-29 22:02:43, SELF, v:1, k:ed@pilha, self:1, rate:100, study:40
+2026-06-29 22:08:21, MOVE, v:1, k:ed@chaves, mode:DOWN
+2026-06-29 22:08:23, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-06-29 22:11:13, EXEC, v:1, k:ed@chaves, mode:FULL, rate:0, size:47
+2026-06-29 22:08:21, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-29 22:08:21, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-29 22:08:21, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-29 22:11:12, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-06-29 22:16:58, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-06-29 22:13:29, MOVE, v:1, k:ed@chaves, mode:EDIT
