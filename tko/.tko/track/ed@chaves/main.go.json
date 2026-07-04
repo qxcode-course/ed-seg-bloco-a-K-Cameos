@@ -2,8 +2,23 @@
     "patches": [
         {
             "label": "2026-06-29_22-11-13",
-            "content": "package main\n\nimport (\n)\n\nfunc main() {\n}\n",
+            "content": "@@ -7,16 +7,28 @@\n e main%0A%0A\n+import (%0A)%0A%0A\n func mai\n",
             "lines": "7"
+        },
+        {
+            "label": "2026-06-30_12-04-16",
+            "content": "@@ -11,468 +11,20 @@\n in%0A%0A\n-import %22fmt%22%0A%0Afunc main() %7B%0A%09q := NewQueue%5Bstring%5D()%0A%0A%09for i := 0; i %3C 16; i++ %7B%0A%09%09team := string(rune('A' + i))%0A%09%09q.Enqueue(team)%0A%09%7D%0A%0A%09for !q.IsEmpty() %7B%0A%09%09if q.items.Len() == 1 %7B%0A%09%09%09break%0A%09%09%7D%0A%09%09%0A%09%09time1 := q.Dequeue()%0A%09%09time2 := q.Dequeue()%0A%0A%09%09var gols1, gols2 int%0A%0A%09%09if _, err := fmt.Scan(&gols1, &gols2); err != nil %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09if gols1 %3C gols2 %7B%0A%09%09%09q.Enqueue(time1)%0A%09%09%7D else %7B%0A%09%09%09q.Enqueue(time2)%0A%09%09%7D%0A%09%7D%0A%0A%09campeao := q.Dequeue()%0A%09fmt.Println(campeao)\n+func main() %7B\n %0A%7D%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-06-30_12-19-06",
+            "content": "@@ -358,9 +358,9 @@\n ls1 \n-%3E\n+%3C\n  gol\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-06-30_12-20-01",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tq := NewQueue[string]()\n\n\tfor i := 0; i < 16; i++ {\n\t\tteam := string(rune('A' + i))\n\t\tq.Enqueue(team)\n\t}\n\n\tfor !q.IsEmpty() {\n\t\tif q.items.Len() == 1 {\n\t\t\tbreak\n\t\t}\n\t\t\n\t\ttime1 := q.Dequeue()\n\t\ttime2 := q.Dequeue()\n\n\t\tvar gols1, gols2 int\n\n\t\tif _, err := fmt.Scan(&gols1, &gols2); err != nil {\n\t\t\tbreak\n\t\t}\n\n\t\tif gols1 > gols2 {\n\t\t\tq.Enqueue(time1)\n\t\t} else {\n\t\t\tq.Enqueue(time2)\n\t\t}\n\t}\n\n\tcampeao := q.Dequeue()\n\tfmt.Println(campeao)\n}\n",
+            "lines": "36"
         }
     ]
 }

@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-04_14-04-00",
+            "content": "@@ -2014,33 +2014,33 @@\n %0A%09for i := 0; i \n-%3C\n+%3E\n  nl; i++ %7B%0A%09%09fmt\n",
+            "lines": "131"
+        },
+        {
+            "label": "2026-07-04_14-04-34",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Stack[T any] struct {\n\tdata []T\n}\n\nfunc NewStack[T any]() *Stack[T] {\n\treturn &Stack[T]{data: []T{}}\n}\n\nfunc (s *Stack[T]) Push(value T) {\n\ts.data = append(s.data, value)\n}\n\nfunc (s *Stack[T]) Top() T {\n\tif len(s.data) == 0 {\n\t\tpanic(\"stack is empty\")\n\t}\n\treturn s.data[len(s.data)-1]\n}\n\nfunc (s *Stack[T]) IsEmpty() bool {\n\treturn len(s.data) == 0\n}\n\nfunc (s *Stack[T]) Pop() T {\n\tif s.IsEmpty() {\n\t\tpanic(\"stack is empty\")\n\t}\n\tvalue := s.data[len(s.data)-1]\n\ts.data = s.data[:len(s.data)-1]\n\treturn value\n}\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc escapeMaze(grid [][]rune, start, end Pos) {\n\tcaminho := NewStack[Pos]()\n\tcaminho.Push(start)\n\n\tdirs := []Pos{{-1, 0}, {1,0}, {0, -1}, {0, 1}}\n\n\tfor !caminho.IsEmpty() {\n\t\tatual := caminho.Top()\n\n\t\tgrid[atual.l][atual.c] = '.'\n\n\t\tif atual.l == end.l && atual.c == end.c {\n\t\t\tbreak\n\t\t}\n\n\t\tachouVizinho := false \n\t\tfor _, d := range dirs {\n\t\t\tnl, nc := atual.l+d.l, atual.c+d.c\n\n\t\t\tif nl >= 0 && nl < len(grid) && nc >= 0 && nc < len(grid[0]) {\n\t\t\t\tif grid[nl][nc] == ' ' {\n\t\t\t\t\tcaminho.Push(Pos{nl, nc})\n\t\t\t\t\tachouVizinho = true\n\t\t\t\t\tbreak\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\tif !achouVizinho {\n\t\t\tgrid[atual.l][atual.c] = 'b'\n\t\t\tcaminho.Pop()\n\t\t}\n\t}\n\tfor i := range grid {\n\t\tfor j := range grid[i] {\n\t\t\tif grid[i][j] == 'b' {\n\t\t\t\tgrid[i][j] = ' '\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\n\tvar nl, nc int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nl, &nc)\n\n\tgrid := make([][]rune, nl)\n\tvar start, end Pos\n\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\n\t\tif len(line) < nc {\n\t\t\tpadded := make([]rune, nc)\n\t\t\tcopy(padded, line)\n\t\t\tfor j := len(line); j < nc; j++ {\n\t\t\t\tpadded[j] = ' '\n\t\t\t}\n\t\t\tline = padded\n\t\t}\n\n\t\tgrid[i] = line\n\n\t\tfor j := 0; j < len(line); j++ {\n\t\t\tif line[j] == 'I' {\n\t\t\t\tstart = Pos{i, j}\n\t\t\t\tgrid[i][j] = ' '\n\t\t\t} else if line[j] == 'F' {\n\t\t\t\tend = Pos{i, j}\n\t\t\t\tgrid[i][j] = ' '\n\t\t\t}\n\t\t}\n\t}\n\n\tescapeMaze(grid, start, end)\n\n\tfor i := 0; i < nl; i++ {\n\t\tfmt.Println(string(grid[i]))\n\t}\n}\n",
+            "lines": "131"
+        }
+    ]
+}
