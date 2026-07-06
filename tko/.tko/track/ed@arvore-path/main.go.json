@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-06_14-58-34",
+            "content": "@@ -404,62 +404,8 @@\n %09%7D%0A%0A\n-%09leftPath := findPath(node.Left, value)%0A%09if leftPath%0A%0A\n %09rig\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-07-06_15-43-36",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\n// retorne o caminho at\u00e9 o n\u00f3 ou ! se n\u00e3o existir\n// voc\u00ea pode fazer recursivo ou interativo\n// tamb\u00e9m pode criar fun\u00e7\u00f5es auxiliares se achar necess\u00e1rio\nfunc findPath(node *Node, value int) string {\n\tif node == nil {\n\t\treturn \"!\"\n\t}\n\n\tif node.Value == value {\n\t\treturn \"x\"\n\t}\n\n\tleftPath := findPath(node.Left, value)\n\tif leftPath\n\n\trightPath := findPath(node.Right, value)\n\tif rightPath != \"!\" {\n\t\treturn \"r\" + rightPath\n\t}\n\treturn \"!\"\n}\n\n// ----------------------------------------------------------------------------------\nfunc BShow(node *Node, heranca string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, heranca+\"l\")\n\t}\n\tfor i := 0; i < len(heranca)-1; i++ {\n\t\tif heranca[i] != heranca[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif heranca != \"\" {\n\t\tif heranca[len(heranca)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, heranca+\"r\")\n\t}\n}\n\nfunc create(parts *[]string) *Node {\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\tif elem == \"#\" {\n\t\treturn nil\n\t}\n\tvalue, _ := strconv.Atoi(elem)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\treturn node\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\troot := create(&parts)\n\tfmt.Println(\"Arvore:\")\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n\tfmt.Println(\"Caminho:\", findPath(root, value))\n}\n",
+            "lines": "92"
+        }
+    ]
+}

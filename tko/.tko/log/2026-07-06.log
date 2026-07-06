@@ -1,0 +1,183 @@
+2026-07-06 09:42:16, MOVE, v:1, k:ed@formatada, mode:DOWN
+2026-07-06 09:42:17, MOVE, v:1, k:ed@formatada, mode:PICK
+2026-07-06 09:42:16, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-06 09:46:00, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-06 09:50:39, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-06 09:54:44, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14, size:87
+2026-07-06 09:54:54, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-06 09:54:44, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-06 09:59:25, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14, size:91
+2026-07-06 10:00:03, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14
+2026-07-06 10:00:01, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-06 10:00:02, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-06 10:01:40, MOVE, v:1, k:ed@formatada, mode:PICK
+2026-07-06 10:01:43, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14
+2026-07-06 10:02:31, MOVE, v:1, k:ed@formatada, mode:PICK
+2026-07-06 10:02:34, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14
+2026-07-06 10:03:41, MOVE, v:1, k:ed@formatada, mode:PICK
+2026-07-06 10:04:06, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14
+2026-07-06 10:05:41, MOVE, v:1, k:ed@formatada, mode:BACK
+2026-07-06 10:05:50, MOVE, v:1, k:ed@serial, mode:DOWN
+2026-07-06 10:05:51, MOVE, v:1, k:ed@serial, mode:PICK
+2026-07-06 10:06:10, EXEC, v:1, k:ed@serial, mode:FULL, rate:0, size:65
+2026-07-06 10:07:00, EXEC, v:1, k:ed@serial, mode:FULL, size:67, fail:COMP
+2026-07-06 10:07:16, EXEC, v:1, k:ed@serial, mode:FULL, size:67, fail:COMP
+2026-07-06 10:07:31, EXEC, v:1, k:ed@serial, mode:FULL, rate:0, size:68
+2026-07-06 10:04:05, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-06 10:05:24, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-06 10:05:50, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-07-06 10:07:29, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-07-06 10:07:31, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-07-06 10:09:09, MOVE, v:1, k:ed@serial, mode:BACK
+2026-07-06 10:09:11, MOVE, v:1, k:ed@formatada, mode:PICK
+2026-07-06 10:09:16, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14, size:93
+2026-07-06 10:10:51, MOVE, v:1, k:ed@formatada, mode:PICK
+2026-07-06 10:10:53, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14
+2026-07-06 10:10:55, MOVE, v:1, k:ed@formatada, mode:BACK
+2026-07-06 10:11:09, MOVE, v:1, k:ed@formatada, mode:PICK
+2026-07-06 10:11:11, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14
+2026-07-06 10:11:34, MOVE, v:1, k:ed@formatada, mode:BACK
+2026-07-06 10:11:42, MOVE, v:1, k:ed@formatada, mode:PICK
+2026-07-06 10:11:45, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14
+2026-07-06 10:11:46, MOVE, v:1, k:ed@formatada, mode:BACK
+2026-07-06 10:12:14, MOVE, v:1, k:ed@formatada, mode:PICK
+2026-07-06 10:12:16, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14
+2026-07-06 10:13:09, MOVE, v:1, k:ed@formatada, mode:BACK
+2026-07-06 10:13:11, MOVE, v:1, k:ed@formatada, mode:PICK
+2026-07-06 10:13:22, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14, size:96
+2026-07-06 10:14:47, MOVE, v:1, k:ed@formatada, mode:BACK
+2026-07-06 10:15:06, MOVE, v:1, k:ed@clonar, mode:DOWN
+2026-07-06 10:15:07, MOVE, v:1, k:ed@clonar, mode:PICK
+2026-07-06 10:13:21, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-06 10:13:27, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-06 10:15:06, MOVE, v:1, k:ed@clonar, mode:EDIT
+2026-07-06 10:15:06, MOVE, v:1, k:ed@clonar, mode:EDIT
+2026-07-06 10:13:21, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-06 10:13:27, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-06 10:15:06, MOVE, v:1, k:ed@clonar, mode:EDIT
+2026-07-06 10:15:06, MOVE, v:1, k:ed@clonar, mode:EDIT
+2026-07-06 10:20:34, MOVE, v:1, k:ed@clonar, mode:BACK
+2026-07-06 10:32:54, MOVE, v:1, k:ed@polonesa, mode:EDIT
+2026-07-06 10:32:54, MOVE, v:1, k:ed@pilhado, mode:EDIT
+2026-07-06 10:34:20, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-07-06 10:34:20, MOVE, v:1, k:ed@queimando, mode:EDIT
+2026-07-06 10:34:20, MOVE, v:1, k:ed@priminhos, mode:EDIT
+2026-07-06 10:34:20, MOVE, v:1, k:ed@wordsearch, mode:EDIT
+2026-07-06 10:34:20, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-06 10:34:20, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-06 10:34:20, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-07-06 10:34:20, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-07-06 10:34:20, MOVE, v:1, k:ed@escada, mode:EDIT
+2026-07-06 10:34:20, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-07-06 10:34:20, MOVE, v:1, k:ed@distancia, mode:EDIT
+2026-07-06 10:34:20, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-07-06 10:34:20, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-07-06 10:34:20, MOVE, v:1, k:ed@enesimo, mode:EDIT
+2026-07-06 11:33:58, MOVE, v:1, k:ed@formatada, mode:PICK
+2026-07-06 11:34:14, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14, size:93
+2026-07-06 11:34:26, MOVE, v:1, k:ed@formatada, mode:BACK
+2026-07-06 11:36:25, MOVE, v:1, k:ed@formatada, mode:PICK
+2026-07-06 11:36:36, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14
+2026-07-06 11:38:53, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14
+2026-07-06 11:40:11, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14, size:92
+2026-07-06 11:40:30, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14
+2026-07-06 11:40:54, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14
+2026-07-06 11:41:06, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14, size:92
+2026-07-06 11:41:05, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-06 11:41:02, MOVE, v:1, k:ed@formatada, mode:EDIT
+2026-07-06 11:47:46, MOVE, v:1, k:ed@formatada, mode:PICK
+2026-07-06 11:48:11, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14
+2026-07-06 11:48:17, MOVE, v:1, k:ed@formatada, mode:BACK
+2026-07-06 11:51:01, MOVE, v:1, k:ed@serial, mode:PICK
+2026-07-06 11:52:31, MOVE, v:1, k:ed@serial, mode:PICK
+2026-07-06 11:57:16, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-07-06 11:59:45, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-07-06 12:05:49, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-07-06 12:15:57, MOVE, v:1, k:ed@serial, mode:EDIT
+2026-07-06 12:21:45, EXEC, v:1, k:ed@serial, mode:FULL, rate:14, size:88
+2026-07-06 12:21:52, MOVE, v:1, k:ed@serial, mode:BACK
+2026-07-06 12:22:11, SELF, v:1, k:ed@serial, self:1, rate:14, study:40
+2026-07-06 12:22:28, SELF, v:1, k:ed@formatada, self:1, rate:14, study:40
+2026-07-06 12:26:46, MOVE, v:1, k:ed@altura, mode:DOWN
+2026-07-06 12:26:46, MOVE, v:1, k:ed@altura, mode:PICK
+2026-07-06 12:26:46, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-07-06 12:26:46, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-07-06 12:34:00, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-07-06 12:40:28, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-07-06 12:43:48, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-07-06 12:56:54, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-07-06 12:57:39, EXEC, v:1, k:ed@altura, mode:FULL, size:121, fail:COMP
+2026-07-06 12:58:22, EXEC, v:1, k:ed@altura, mode:FULL, rate:0, size:126
+2026-07-06 13:00:42, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-07-06 12:58:21, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-07-06 13:06:22, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-07-06 13:09:36, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-07-06 13:16:54, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-07-06 13:17:19, EXEC, v:1, k:ed@altura, mode:FULL, size:144, fail:COMP
+2026-07-06 13:19:05, EXEC, v:1, k:ed@altura, mode:FULL, rate:14, size:144
+2026-07-06 13:19:03, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-07-06 13:19:05, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-07-06 13:24:47, MOVE, v:1, k:ed@altura, mode:BACK
+2026-07-06 13:25:21, SELF, v:1, k:ed@altura, self:1, rate:14, study:65
+2026-07-06 13:49:02, MOVE, v:1, k:ed@compare, mode:DOWN
+2026-07-06 13:49:04, MOVE, v:1, k:ed@compare, mode:PICK
+2026-07-06 13:49:02, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-06 13:49:02, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-06 13:53:31, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-06 13:58:46, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-06 14:10:22, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-06 14:17:45, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-06 14:24:33, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-06 14:27:43, EXEC, v:1, k:ed@compare, mode:FULL, rate:12, size:102
+2026-07-06 14:27:42, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-06 14:32:49, MOVE, v:1, k:ed@compare, mode:BACK
+2026-07-06 14:33:56, SELF, v:1, k:ed@compare, self:1, rate:12, study:50
+2026-07-06 14:39:53, MOVE, v:1, k:ed@arvore-path, mode:DOWN
+2026-07-06 14:39:54, MOVE, v:1, k:ed@arvore-path, mode:PICK
+2026-07-06 14:39:53, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-06 14:42:30, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-06 14:51:49, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-06 14:57:14, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-06 14:58:34, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:12, size:89
+2026-07-06 15:02:33, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-06 14:58:33, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-06 15:03:35, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-06 15:43:36, EXEC, v:1, k:ed@arvore-path, mode:FULL, size:92, fail:COMP
+2026-07-06 15:43:41, MOVE, v:1, k:ed@arvore-path, mode:BACK
+2026-07-06 15:43:45, MOVE, v:1, k:ed@compare, mode:PICK
+2026-07-06 15:44:14, EXEC, v:1, k:ed@compare, mode:FULL, rate:12
+2026-07-06 15:44:24, EXEC, v:1, k:ed@compare, mode:FULL, rate:33
+2026-07-06 15:44:40, EXEC, v:1, k:ed@compare, mode:FULL, rate:12
+2026-07-06 15:44:55, EXEC, v:1, k:ed@compare, mode:FULL, rate:33
+2026-07-06 15:45:12, EXEC, v:1, k:ed@compare, mode:FULL, rate:12
+2026-07-06 15:45:25, EXEC, v:1, k:ed@compare, mode:FULL, rate:12
+2026-07-06 15:45:40, EXEC, v:1, k:ed@compare, mode:FULL, rate:12
+2026-07-06 15:45:50, EXEC, v:1, k:ed@compare, mode:FULL, rate:12
+2026-07-06 15:46:10, EXEC, v:1, k:ed@compare, mode:FULL, rate:12
+2026-07-06 15:46:23, EXEC, v:1, k:ed@compare, mode:FULL, rate:12
+2026-07-06 15:43:33, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-06 15:45:47, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-06 15:43:47, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-06 15:47:38, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-06 15:48:33, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-06 15:48:43, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-06 15:53:03, MOVE, v:1, k:ed@compare, mode:PICK
+2026-07-06 15:53:05, EXEC, v:1, k:ed@compare, mode:FULL, rate:33
+2026-07-06 15:53:09, MOVE, v:1, k:ed@compare, mode:BACK
+2026-07-06 15:53:13, MOVE, v:1, k:ed@compare, mode:PICK
+2026-07-06 15:53:34, EXEC, v:1, k:ed@compare, mode:FULL, rate:12
+2026-07-06 15:53:43, MOVE, v:1, k:ed@compare, mode:BACK
+2026-07-06 15:57:57, MOVE, v:1, k:ed@compare, mode:BACK
+2026-07-06 15:54:39, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-06 15:53:30, MOVE, v:1, k:ed@compare, mode:EDIT
+2026-07-06 15:58:25, MOVE, v:1, k:ed@arvore-path, mode:PICK
+2026-07-06 16:08:19, MOVE, v:1, k:ed@formatada, mode:PICK
+2026-07-06 16:08:56, EXEC, v:1, k:ed@formatada, mode:FULL, size:92, fail:COMP
+2026-07-06 16:09:14, EXEC, v:1, k:ed@formatada, mode:FULL, fail:COMP
+2026-07-06 16:09:35, EXEC, v:1, k:ed@formatada, mode:FULL, fail:COMP
+2026-07-06 16:09:47, EXEC, v:1, k:ed@formatada, mode:FULL, fail:COMP
+2026-07-06 16:09:48, EXEC, v:1, k:ed@formatada, mode:FULL, fail:COMP
+2026-07-06 16:10:20, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14, size:92
+2026-07-06 16:10:34, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14
+2026-07-06 16:10:43, EXEC, v:1, k:ed@formatada, mode:FULL, rate:14
+2026-07-06 16:10:51, MOVE, v:1, k:ed@formatada, mode:BACK

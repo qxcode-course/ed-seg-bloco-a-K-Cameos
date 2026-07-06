@@ -19,7 +19,8 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@linear
+- ed@tree
+- ed@dfs
 flags:
   inbox: all
   panel: skills
@@ -29,5 +30,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@pilhado
-selected_index: 11
+selected: ed@serial
+selected_index: 8
