@@ -28,7 +28,9 @@ func findPath(node *Node, value int) string {
 	}
 
 	leftPath := findPath(node.Left, value)
-	if leftPath
+	if leftPath != "!" {
+		return "l" + leftPath
+	}
 
 	rightPath := findPath(node.Right, value)
 	if rightPath != "!" {
