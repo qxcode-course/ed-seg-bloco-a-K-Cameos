@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-07_20-16-59",
+            "content": "@@ -370,17 +370,17 @@\n ws %7C%7C c \n-%3E\n+%3C\n  0 %7C%7C c \n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-07-07_20-17-44",
+            "content": "@@ -497,18 +497,16 @@\n dfs(r, c\n-+1\n )%0A%09%7D%0A%0A%09f\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-07-07_20-20-26",
+            "content": "@@ -357,17 +357,17 @@\n  0 %7C%7C r \n-%3E\n+%3C\n = rows %7C\n@@ -370,17 +370,17 @@\n ws %7C%7C c \n-%3C\n+%3E\n  0 %7C%7C c \n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-07-07_20-20-59",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o numIslands \n// Ela \u00e9 a fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode para resolver o problema\nfunc numIslands(grid [][]byte) int {\n\tif len(grid) == 0 {\n\t\treturn 0\n\t}\n\t\n\tcount := 0 \n\trows := len(grid)\n\tcols := len(grid[0])\n\n\tvar dfs func(r, c int)\n\tdfs = func(r,c int) {\n\t\tif r < 0 || r >= rows || c < 0 || c >= cols || grid[r][c] == '0' {\n\t\t\treturn\n\t\t}\n\n\t\tgrid[r][c] = '0'\n\n\t\tdfs(r-1, c)\n\t\tdfs(r+1, c)\n\t\tdfs(r, c-1)\n\t\tdfs(r, c+1)\n\t}\n\n\tfor r := 0; r < rows; r++ {\n\t\tfor c := 0; c < cols; c++{\n\t\t\tif grid[r][c] == '1' {\n\t\t\t\tcount++\n\t\t\t\tdfs(r,c)\n\t\t\t}\n\t\t}\n\t}\n\t\n\treturn count\n\n\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tgrid := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tgrid[i] = []byte(scanner.Text())\n\t}\n\tresult := numIslands(grid)\n\tfmt.Println(result)\n}\n",
+            "lines": "62"
+        }
+    ]
+}

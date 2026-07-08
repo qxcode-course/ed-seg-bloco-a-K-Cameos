@@ -25,3 +25,4 @@
 {"ts":1783378911,"hash":"5c6a8533ea72e260368874badba85d54e1fdb761b45ce1999a692d9f22d23f2a","mode":"diff","ops":[{"tag":"replace","a1":45,"a2":46,"text":"\tserializeHelper(node.Right, parts)\n"},{"tag":"insert","a1":47,"a2":47,"text":"\n"},{"tag":"replace","a1":50,"a2":51,"text":"\tvar parts\n"}]}
 {"ts":1783379120,"hash":"4fe5f8c8500ae3cc9482616ce06e4ded1276b67d4011b3fd534c1a6b05b4bb5d","mode":"diff","ops":[{"tag":"replace","a1":51,"a2":52,"text":"\tvar parts []string\n"}]}
 {"ts":1783379142,"hash":"a53d194afe1f6c1856b8b0cd7ddfba2f1de6785fa89ef0bae146ddbf883062ff","mode":"diff","ops":[{"tag":"insert","a1":52,"a2":52,"text":"\tserializeHelper(root, &parts)\n\treturn strings\n"}]}
+{"ts":1783464706,"hash":"294dfc4828628fe91a7af52a2a993d5b34edc8433a191270064c27a83b0f7733","mode":"diff","ops":[{"tag":"replace","a1":53,"a2":54,"text":"\treturn strings.Join(parts, \" \")\n"}]}

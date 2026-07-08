@@ -19,7 +19,6 @@ sources:
   writeable: false
   quests: null
 expanded:
-- eval1@eval1
 - ed@dfs
 - ed@bfs
 flags:
@@ -31,5 +30,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@tree
-selected_index: 7
+selected: ed@pintura
+selected_index: 12
